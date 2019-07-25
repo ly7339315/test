@@ -1,0 +1,91 @@
+day02的复习
+	运算符和操作符
+		+ - * / %
+		++ --
+		= += -= *= /= %=
+			a+=1;
+		一元运算符  + - 
+		三目运算符  a>2?3:4;
+		逻辑运算符 &&  ||  !
+	数据类型的转换
+		其他->string
+			1).toString();
+				null和undefined没toString()
+				(3).toString()
+				3.2
+				number 3->Number(3)
+					3 --->基础数据类型
+					(3).toString()
+				String()
+				Boolean()
+			2)String()
+			3)+''
+		其他->boolean
+			1) Boolean()
+			2) !!
+		其他—>number
+			1) Number()
+			2) +  -
+			3) parseInt()
+			4) parseFloat()
++
+	m+n
+		1)如果m,n都不是string类型和object类型，将它转换为number类型然后累加
+			true+true    2
+			true+1       2
+			undefined+1  NaN
+			null+1       1
+			..
+		2)如果有一个是string类型，另一个不是object类型，而是其他基本数据类型，进行字符串的拼接
+			'1'+1   11
+			'1'+true   1true
+		3)如果有一个是object类型，如果重写了toString()和valueOf(),优先调用valueOf()的返回值，然后再进行计算。
+		obj = {
+			valueOf:function(){
+				return '1';
+			}
+		};
+		obj+1   '1'+1   11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+

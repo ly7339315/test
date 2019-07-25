@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#a1{
+		background-color: pink;
+	}
+	#a1 #a2,#a1 #a3{
+		width: 80px;
+		height: 80px;
+		background-color: teal;
+		}
+	#a2{
+		height: 160px;
+		margin-bottom: 50px;
+	}
+	#a3{
+        margin-top: 50px;
+	}
+</style>
+<body>
+	<div id="a1" onclick="aa1()">
+		<div id="a2"></div>
+		<div id="a3"></div>
+	</div>
+	<script>
+function myfunction(){
+   window.alert('OJBK');
+}
+document.write("<h1>这是一个标题</h1>");
+document.write("<p>这是一个段落。</p>");
+
+</script>
+<p >
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+<button type="button" onclick="myfunction()">点击这里</button>
+</body>
+</html>
+<script type="text/javascript">
+	var a1=document.getElementById('a1');
+	var a2=document.getElementById('a2');
+	function aa1() {
+		a1.style.margin='100px';
+	}
+</script>

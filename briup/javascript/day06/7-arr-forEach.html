@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [{
+			name:'zhangsan',
+		},{
+			name:'lisi'
+		},{
+			name:'terry'
+		}];
+		var ageInit = 10;
+    arr.forEach(function(item,index,arr){
+    	// console.log(item,index,arr);
+    	//item.age=12;
+    	item.age = ageInit++;
+         
+    });
+  console.log(arr);
+
+	</script>
+</body>
+</html>

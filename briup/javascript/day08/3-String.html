@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = ' abc defg ';
+		str.split('').forEach(function(item){
+           console.log(item);
+		});
+		for(var i = 0;i<str.length;i++){
+            console.log(str.charAt(i),'--',str.charCodeAt(i));
+		}
+		console.log(str.split(' ').join(''));
+		console.log(str.trim());
+		console.log(str.concat('hello'));
+		console.log(str.concat({name:'briup'}));
+		console.log('hello'.toUpperCase());
+		console.log('HELLO'.toLowerCase());
+	</script>
+</body>
+</html>

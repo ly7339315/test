@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 排序sort
+        // Array.prototype.sorts=function(){
+        //      for(var i=0;i<arr.length;i++){
+        //                 var min = i;
+        //                 for(var j=i+1;j<arr.length;j++){
+        //                     if(arr[j]<arr[min]){
+        //                         min = j
+        //                     }
+        //                 }
+        //                 var temp = arr[i]
+        //                     arr[i] = arr[min]
+        //                     arr[min] = temp
+        //             }  
+        //               return arr;
+        // }
+
+
+        // 反转reverse
+        // Array.prototype.newReverse= function(){
+        //     for(i=0,j=this.length-1;j>i;j--,i++){
+        //         var temp = this[i]
+        //             this[i] = this[j]
+        //             this[j] = temp
+        //     }
+        //     return this
+        // }
+        // var a = [1,2,3,4,5,6,7,8]
+        // a.newReverse()
+        // console.log(a)
+
+
+        // 入栈push
+        // Array.prototype.myPush = function(item){
+        //     this[this.length] = item;
+        //     return this.length
+        // }
+        // var a = [1,2,3,4]
+        // a.myPush(5)
+        // console.log(a)
+
+        
+        // 出栈pop
+        Array.prototype.myPop = function(){
+            var b=this.length;
+            var result = this[b-1];
+            this.length = b - 1;
+            return result;
+        }
+        var a = [1,2,3,4]
+        console.log(a.myPop())
+        console.log(a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

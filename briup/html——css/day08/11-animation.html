@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		background-color: pink;
+		animation-name: myani;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-delay: 2s;
+		/*等待时填充准备播放的帧*/
+		/*animation-fill-mode: backwards;*/
+		/*动画结束时，用最后一帧填充*/
+		/*animation-fill-mode: forwards;*/
+		/*速度曲线*/
+		/*animation-timing-function: ease;*/
+			/*animation-timing-function:ease-in;*/
+				animation-timing-function:ease-out;
+					/*animation-timing-function:ease-in-out;*/
+						/*animation-timing-function:linear;*/
+
+	}
+	div:hover{
+		animation-play-state: paused;
+		/*animation-play-state: running;*/
+	}
+	@keyframes myani{
+		from{
+		    width: 100px;
+		    height: 100px;
+		    background-color: cyan;
+		}
+		to{
+			width: 300px;
+			height: 300px;
+			background-color: teal;
+		}
+		/*0%{}
+		100%{}*/
+	}
+</style>
+<body>
+	<div></div>
+</body>
+</html>

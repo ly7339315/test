@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#outer{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			border: 1px solid red;
+		}
+		#center{
+			width: 100px;
+			height: 100px;
+			background-color: cyan;
+			margin: 50px;
+			border: 1px solid red;
+		}
+		#inner{
+			width: 50px;
+			height: 50px;
+			background-color: coral;
+			margin: 25px;
+			border: 1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var outer = document.getElementById('outer');
+			var center = document.getElementById('center');
+			var inner = document.getElementById('inner');
+
+			function handle(){
+				console.log(this,'冒泡');
+			}
+			function handle2(){
+				console.log(this,'捕获');
+			}
+			
+			outer.addEventListener('click',handle2,true);
+			center.addEventListener('click',handle2,true);
+			inner.addEventListener('click',handle2,true);
+
+			outer.addEventListener('click',handle,false);
+			center.addEventListener('click',handle,false);
+			inner.addEventListener('click',handle,false);
+
+			
+
+
+		}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<div id="center">
+			<div id="inner">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

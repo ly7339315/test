@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function sayName(){
+		console.log(this.name);
+	}
+		function Person(name,age,gender) {
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.sayName = sayName;
+
+		}
+		function Dog(name,age,color){
+            this.name = name;
+            this.age = age;
+            this.color = color;
+            this.sayName = sayName;
+
+		}
+		var p1 = new Person('zhangsan',14,'男');
+		var dog = new Dog('旺财',2,'金黄色');
+		console.log(p1.constructor);
+		console.log(p1);
+		console.log(dog);
+		console.log(dog.constructor);
+
+
+
+
+
+	</script>
+</body>
+</html>

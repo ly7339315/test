@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [43,345,54,44,434,434,44,5,54,3,45,3];
+
+          Array.prototype.myEvery = function(fun,funThis){
+          	   var result
+               for(var i=0;i<this.length;i++){
+                    result =   fun.call(funThis,this[i],i,this);
+                   if(!result){
+                   	break;
+                   
+                   }
+               }
+               return result;
+          }
+
+
+
+         var result = arr.myEvery(function (item,index,arr) {
+              console.log(this);
+              return item>0;
+         },{});
+         console.log(result);
+
+
+
+	</script>
+</body>
+</html>

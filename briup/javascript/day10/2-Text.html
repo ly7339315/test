@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var text = document.body.firstChild;
+		console.log(text);
+		text.appendData('world');
+		console.log(text);
+		text.splitText(5);
+
+		console.log(document.body.childNodes);
+		document.body.normalize();
+		console.log(document.body.childNodes);
+		console.log(text);
+		console.log(text.substringData(5,5));
+		console.log(text);
+		text.deleteData(5,5);
+		console.log(text);
+
+	}
+</script>
+</head>
+<body>hello</body></html>

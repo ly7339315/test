@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var str = 'HELLOworld helloworld hello';
+		// var pattern = /helloo/ig;
+		// console.log(pattern.lastIndex);
+		// var result = pattern.test(str);
+		// console.log(pattern.lastIndex);
+  //        console.log(result);
+
+  //        var result = pattern.exec(str);
+  //        console.log(result);
+  //        console.log(result.length);
+  //        console.log(result.index);
+  //        console.log(result.input);
+
+
+  var str = 'HELLO wor Hello world hello';
+  // var pattern = /hello/ig;
+  var pattern = /hello/ig;
+  // console.log(pattern.test(str));
+  // console.log(pattern.exec(str));
+  // console.log(pattern.lastIndex);
+var arr = [];
+// while(result = pattern.exec(str)){
+//      //console.log(result);
+//      arr.push(result[0]);
+// }
+console.log(arr);
+var result = str.match(pattern);
+console.log(result);
+console.log(str.search(pattern));
+
+
+var str = 'hello hello hello hello';
+var result = str.replace(/hello/ig,'JavaScript');
+console.log(result);
+console.log(str);
+
+
+var str = '12&34&45';
+console.log(str.split('&'));
+console.log(str.split(/&/));
+console.log(str.split(''));
+	</script>
+
+</body>
+</html>

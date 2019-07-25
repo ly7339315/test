@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var num;
+		function onenum() {
+			var onenum=document.getElementById('onenum').value;
+			return onenum;
+		}
+		function twonum() {
+			var twonum=document.getElementById('twonum').value;
+			return twonum;
+		}
+		function jia() {
+			var a=onenum(),b=twonum();
+			var num=Number(a)+Number(b);
+			sendResult(num);
+			
+		}
+		function jian() {
+			var a=onenum(),b=twonum();
+			var num=Number(a)-Number(b);
+			sendResult(num);
+		}
+		function cen() {
+			var a=onenum(),b=twonum();
+			var num=Number(a)*Number(b);
+			sendResult(num);
+		}
+		function chu() {
+			var a=onenum(),b=twonum();
+			var num=Number(a)/Number(b);
+			sendResult(num);
+		}
+		function sendResult(num) {
+
+			document.getElementById('num').innerHTML=num;
+			// alert(num);
+
+		}
+		
+		function jiaone() {
+			var a=Number(document.getElementById('one').value);
+			a=a+1;
+			document.getElementById('one').value=a;
+		}
+		function jiantwo() {
+			var a=document.getElementById('one').value;
+			a=a-1;
+			document.getElementById('one').value=a;
+		}
+		function age() {
+			var age,pandin;
+			age=document.getElementById('age').value;
+			if (age<18&&age>0) {
+				pandin='太小';
+
+			}else if (age>=18&&age<=50){
+				pandin='合适';
+			}else if (age>50&&age<=100) {
+				pandin='太老';
+			}else{
+				pandin='没戏';
+			}
+
+			document.getElementById('age1').innerHTML=pandin;
+
+		}
+		function date() {
+			var time=new Date().getHours();
+			if (time>6&&time<10) {
+				document.getElementById('date').innerHTML="上午好！";
+			}else if (time>=10&&time<=14) {
+				document.getElementById('date').innerHTML="中午好！";
+
+			}else if (time>14&&time<20) {
+				document.getElementById('date').innerHTML="下午好！";
+			}else if (time>=20&&time<=24) {
+				document.getElementById('date').innerHTML="晚上好！";
+			}else{
+				document.getElementById('date').innerHTML="快去睡觉！";
+			}
+		}
+
+		function tianming() {
+			var r=Math.random();
+			var x=document.getElementById('tian');
+			if (r>0&&r<=0.25) {
+				x.innerHTML='富人';
+			}else if (r>0.25&&r<=0.5) {
+
+				x.innerHTML='穷人';
+			}else if (r>0.5&&r<=0.75) {
+				x.innerHTML='乞丐';
+
+			}else  {
+				x.innerHTML='高官';
+
+			}
+
+		}
+
+		
+
+		
+	</script>
+</head>
+<body >
+ <tr>
+ 	<td>第一个数：</td>
+ 	<td><input type="text" id="onenum"></td>
+ </tr>
+ <tr>
+ 	<td>第二个数：</td>
+ 	<td><input type="text" id="twonum"></td>
+ </tr>
+ <tr>
+ 	<button onclick="jia()">+</button>
+ 	<button onclick="jian()">-</button>
+ 	<button onclick="cen()">*</button>
+ 	<button onclick="chu()">/</button>
+ </tr>
+ <tr>
+ 	<p id="num"></p>
+ </tr>
+	<input type="text" id="one"></input>
+	<button onclick="jiaone()">+1</button>
+	
+	<button onclick="jiantwo()">-1</button>
+
+	年龄：<input type="text" id="age">
+	<button onclick="age()">年龄判断</button>
+	<p id="age1"></p>
+
+
+	<button onclick="date()">打招呼</button>
+	<p id="date"></p>
+
+	<p id="tian">你的天命</p>
+	<button onclick="tianming()">预测</button>
+</body>
+</html>

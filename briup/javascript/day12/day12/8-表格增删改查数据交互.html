@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script  src="../myAjax.js"></script>
+	<script >
+		window.onload = function(){
+			var tbody = document.getElementsByTagName('tbody')[0];
+			var btnsDiv = document.getElementsByClassName('btns-div')[0];
+			
+			findAllCategory();
+
+			tbody.onclick = function(event){
+             var target = event.target;
+             if(target.nodeName === 'BUTTON'){
+             	var id = target.getAttribute('data-id');
+             	console.log(id);
+             	deleteCategoryById({id:id});
+             }
+			}
+
+			btnsDiv.onclick = function(event){
+                     var target = event.target;
+                     if(target.innerText==='新增'){
+                     	saveOrUpdateCategory({
+                     		name:'test',
+                     		comment:'ttt',
+                     		no:12
+                     	});
+                     }
+                     	if(target.innerText==='批量删除'){
+                     		var inputs = document.getElementsByTagName('input');
+			inputs = Array.prototype.slice.call(inputs,0);
+                     		var ids = inputs.filter(function(item){
+                     			return item.checked;
+                     		}).map(function(item){
+                     			return item.value;
+                     		});
+                     		batchDeleteCategory({ids:ids.join()});
+                     	}
+			}
+
+			function saveOrUpdateCategory(obj){
+				myajax('POST','saveOrUpdateCategory',obj,function(res){
+           		
+           		findAllCategory();
+           	},function(error){
+           		console.log(error);
+           	});
+			}
+
+			 function batchDeleteCategory(obj){
+           		myajax('POST','batchDeleteCategory',obj,function(res){
+           		
+           		findAllCategory();
+           	},function(error){
+           		console.log(error);
+           	});
+           }
+
+			function deleteCategoryById(obj){
+				myajax('GET','deleteCategoryById',obj,function(res){
+
+                     findAllCategory();
+				},function(error){
+					console.log(error);
+				});
+			}
+
+
+
+
+
+			function findAllCategory(){
+           	myajax('GET','findAllCategory',null,function(res){
+           		console.log(res.data);
+           		var str = '';
+           		if(res.data&&res.data.length>0){
+           			res.data.forEach(function(item){
+                       str +='<tr>';
+                       str +=`
+                       <td><input type="checkbox" name="" value='`+item.id+`'></td>
+				<td>`+item.name+`</td>
+				<td>`+item.comment+`</td>
+				<td><button data-id="`+item.id+`">删除</button></td>`;
+
+                       str +='</tr>';
+           			});
+           		}
+           		tbody.innerHTML = str;
+           	},function(error){
+           		console.log(error);
+           	});
+           }
+		}
+	</script>
+</head>
+<body>
+	<div class="btns-div">
+		<button>新增</button>
+		<button>批量删除</button>
+
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>名称</th>
+				<th>描述</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td><input type="checkbox" name=""></td>
+				<td></td>
+				<td></td>
+				<td><button>删除</button></td>
+			</tr> -->
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = 'haelaalo123world567ae';
+		var pattern = /[abe][abe]/ig;
+		console.log(str.match(pattern));
+		var pattern = /^([a-z]|[0-9]){3,12}@([a-z]|[0-9]){4,10}\.[a-z]{3,5}$/ig;
+		var str = '804061465@qq.com';
+		console.log(pattern.test(str));
+
+		var str = 'hellohellohelloworld';
+		pattern = /(hello)+?/ig;
+      console.log(str.match(pattern));
+	</script>
+</body>
+</html>

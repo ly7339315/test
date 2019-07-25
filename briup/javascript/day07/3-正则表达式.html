@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var pattern = new RegExp('hello','img');
+		console.log(pattern);
+		var pattern = /hello/ig;
+		console.log(pattern);
+
+		console.log(pattern.global);//是否全局
+		console.log(pattern.ignoreCase);//是否忽略大小写
+		console.log(pattern.multiline);//是否多行
+		console.log(pattern.source);
+		console.log(pattern.lastIndex);
+	</script>
+</body>
+</html>

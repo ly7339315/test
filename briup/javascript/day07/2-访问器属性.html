@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+      name:'zhangsan',
+      age:12,
+      _weight:100
+		};
+		Object.defineProperty(obj,'weight',{
+			get:function(){
+              return this._weight-10;
+			},
+			set:function(param){
+              this._weight = param;
+			},
+			
+			 enumerable:true,
+			 configurable:true
+		});
+
+		Object.defineProperty(obj,'_weight',{
+            enumerable:false
+		});
+
+		// Object.defineProperty(obj,{
+		// 	 _weight:{
+		// 		enumerable:false
+		// 	},
+
+		// 	 weight:{
+			 	
+		// 	 get:function(){
+  //             return this._weight-10;
+		// 	},
+		// 	set:function(param){
+  //             this._weight = param;
+		// 	},
+		// 	enumerable:true
+		 	
+		// 	 },
+			
+		// });
+
+		console.log(obj.weight);
+		obj.weight = 130;
+		console.log(obj.weight);
+		console.log(obj);
+		console.log(Object.getOwnPropertyDescriptor(obj,'weight'));
+		console.log(Object.getOwnPropertyDescriptor(obj,'_weight'));
+	</script>
+</body>
+</html>

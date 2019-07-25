@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+
+// saveOrUpdateCategory({name:'text',comment:'test',no:13});
+deleteCategoryById(2);
+
+// batchDeleteCategory([273,274,275,276,277]);
+
+
+function batchDeleteCategory(arr){
+  var http = new XMLHttpRequest();
+	http.open('POST','http://134.175.154.93:8099/manager/category/batchDeleteCategory');
+	http.onreadystatechange = function(){
+    if(http.status ===200&&http.readyState === 4){
+    	console.log(http.responseText);
+    	findAllCategory();
+        }
+	}
+	http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+	http.send(encodeFormData({ids:arr.join()}));
+}
+
+
+
+function deleteCategoryById(id){
+	var http = new XMLHttpRequest();
+	http.open('GET','http://134.175.154.93:8099/manager/category/deleteCategoryById?id='+id);
+	http.onreadystatechange = function(){
+			if(http.status===200&&http.readyState===4){
+				console.log(http.responseText);
+				findAllCategory();
+			}
+
+		}
+		http.send();
+}
+
+
+	function findAllCategory(){
+		var http = new XMLHttpRequest();
+		http.open('GET','http://134.175.154.93:8099/manager/category/findAllCategory');
+		http.onreadystatechange = function(){
+			if(http.status===200&&http.readyState===4){
+				console.log(http.responseText);
+				
+			}
+
+		}
+		http.send();
+	}
+
+
+
+
+
+     function saveOrUpdateCategory(obj){
+	
+	var http = new XMLHttpRequest();
+	http.open('POST','http://134.175.154.93:8099/manager/category/saveOrUpdateCategory');
+	http.onreadystatechange = function(){
+    if(http.status ===200&&http.readyState === 4){
+    	console.log(http.responseText);
+    	findAllCategory();
+    }
+	}
+	http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+	http.send(encodeFormData(obj));
+	// http.send({
+	// 	name:'liyu',
+	// 	comment:'liyu1',
+	// 	no:37
+	// });
+     }
+	
+
+
+
+		function encodeFormData(data){
+				if(!data){
+					return "";
+				}
+				var pairs = [];
+				for(var name in data){
+					if(!data.hasOwnProperty(name)){
+						continue;
+					}
+					if(typeof data[name] == "function"){
+						continue;
+					}
+					var value = data[name].toString();
+					name = encodeURIComponent(name.replace("%20","+"));//编码名字
+					value = encodeURIComponent(value.replace("%20","+"));//编码值
+					pairs.push(name+"="+value);
+				}
+				return pairs.join('&');
+			}
+
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

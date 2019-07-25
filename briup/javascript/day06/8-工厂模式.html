@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			name:'zhangsan',
+			age:12,
+			gender:'男'
+		};
+		var obj2 ={
+			name:'lisi',
+			age:14,
+			gender:'女'
+		};
+function sayName(){
+	console.log(this.name);
+}
+
+function createObject(name,age,gender){
+       return  {
+     	name:name,
+     	age:age,
+     	gender:gender,
+     	sayName:sayName,
+}
+}
+
+var o1 = createObject('zhangsan',12,'男');
+var o2 = createObject('lisi',34,'女');
+var dog = createObject('旺财',1,'雌');
+
+console.log(o1,o2,dog);
+console.log(o1.constructor,o2.constructor,dog.constructor);
+console.log(o1.sayName === o2.sayName);
+	</script>
+</body>
+</html>

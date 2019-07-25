@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    </head>
+ 
+    <body>
+        <div class="dropdown open" id="treeContextMenu" style="display: none;position: absolute">
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" id="toUpdateBtn">编辑</a>
+                </li>
+                <li>
+                    <a href="javascript:;" id="deleteBtn">删除</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        //屏蔽浏览器右键菜单
+        document.oncontextmenu = function() {
+            return false;
+        }
+        //按下鼠标
+        $(document).mousedown(function(e) {
+            var key = e.which;
+            //获取鼠标键位
+            if(key == 3)
+            //(1:代表左键； 2:代表中键； 3:代表右键)  
+ 
+            {
+                //获取右键点击坐标
+                var x = e.clientX;
+                var y = e.clientY;
+                $("#treeContextMenu").show().css({
+                    left: x,
+                    top: y
+                });
+            }
+        });
+        //点击任意部位隐藏
+        $(document).click(function() {
+            $("#treeContextMenu").hide();
+ 
+        })
+    </script>
+ 
+</html>

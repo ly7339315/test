@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格的增删改查</title>
+	<!-- 引入外部js -->
+	<script src="./myAjax.js">
+	</script>
+	<script>
+		// console.log(myAjax);
+		window.onload = function(){
+			// 1.获取tbody
+			// 2.获取后台数据
+			// 3.将后台数据展示到表格中
+			var tbody = document.getElementsByTagName('tbody')[0];
+			// 查找category的数据
+			findAllCategory();
+
+
+
+
+
+			//单个删除
+			// 1.获取要删除的id
+			// 2.传递给后台删除
+			// 3.获取所有的数据重新展示
+			//批量删除
+			//查找category的数据 
+			function findAllCategory(){
+				myAjax('GET','/manager/category/findAllCategory',null,function(res){
+					console.log(res.data);
+					// 遍历数据，追加到tbody
+					var str = '';
+					if(res.data&&res.data.length>0){
+						res.data.forEach(function(item){
+							str += '<tr>';
+							str += `
+								<td><input type="checkbox" value="`+item.id+`"></td>
+								<td>`+item.name+`</td>
+								<td>`+item.comment+`</td>
+								<td><button data-id="`+item.id+`">删除</button></td>
+							`;
+							str += '</tr>';
+						});
+					}
+					tbody.innerHTML = str;
+				},function(error){
+					console.log(error);
+				});
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="btns-div">
+		<button>新增</button>
+		<button>批量删除</button>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>名称</th>
+				<th>描述</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td><button>删除</button></td>
+			</tr> -->
+		</tbody>
+	</table>
+</body>
+</html>

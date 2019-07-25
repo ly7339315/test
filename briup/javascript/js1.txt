@@ -1,0 +1,29 @@
+﻿1.js中基本数据类型有哪些？
+在 JavaScript 中有 5 种不同的数据类型：
+
+    string  字符
+    number  数字
+    boolean  布尔
+    object  对象
+    function  函数
+
+3 种对象类型：
+
+    Object  对象
+    Date  日期
+    Array  数组
+
+2 个不包含任何值的数据类型：
+
+    null  空
+    undefined  未定义
+
+2.null 和 undefined的区别是什么？
+（1）undefined：是所有没有赋值变量的默认值，自动赋值。
+（2）null：主动释放一个变量引用的对象，表示一个变量不再指向任何对象地址。 
+3.typeOf的取值有哪几个？当取值为object时候可能为哪几种数据类型？
+string  number boolean object undefined   
+
+万物皆为对象
+4.js的组成有哪几部分？
+ES5  DOM BOM

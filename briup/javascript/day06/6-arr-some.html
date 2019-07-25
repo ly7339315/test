@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var stus = [{
+			name:'zhangsan',
+			age:20
+		},{
+			name:'lisi',
+			age:12
+		},{
+			name:'briup',
+			age:13
+		}];
+		console.log(stus);
+       
+        var result=!(stus.some(function(item,index,arr){
+                return item.age<18;
+        }));
+
+        console.log(result);
+        var result = stus.some(function(item,index,arr){
+        	return item.age<18;
+        });
+        console.log(result);
+
+
+        var result = stus.filter(function(item,index,arr){
+        	return item.age>=18;
+        });
+        console.log(result);
+
+        var result = stus.filter(function(item,index,arr){
+        	return item.age<18;
+        });
+         console.log(result);
+
+         var result = stus.map(function(item,index,arr){
+         	return item.name;
+         });
+         console.log(result);
+
+         var result = stus.map(function(item,index,arr){
+         	return item.age*2;
+         });
+         console.log(result);
+
+         var result = stus.filter(function(item,index,arr){
+            return item.age<18;
+         }).map(function(item,index,arr){
+         	return item.name;
+         });
+         console.log(result);
+	</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+*{
+	padding:0;
+	margin:0;
+}
+
+
+
+	div>ul{
+		width: 500px;
+		height: 30px;
+		border:1px solid red;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+	    line-height: 30px;
+	    position: relative;
+
+
+		
+	}
+	div>ul>li{
+		width: 100px;
+		text-align: center;
+
+		
+
+	}
+	div>ul>li:hover>ul{
+		display: block;
+		position: absolute;
+		left: 0;
+		
+	}
+
+	div>ul>li>ul{
+		display: none;
+		list-style: none;
+		text-align: left;
+		padding-top: 10px;
+		width: 500px;
+
+
+		
+	}
+	div>ul>li>ul>li{
+float: left;
+
+	}
+</style>
+<body>
+	<div>
+		<div>
+			<ul>
+				<li>1111
+				<ul>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+					<li>123</li>
+
+
+				</ul>
+                </li>
+				
+				<li>2222
+				<ul>
+					<li>222</li>
+					<li>222</li>
+					<li>222</li>
+				</ul></li>
+				<li>3333
+				<ul>
+					<li>333</li>
+					<li>333</li>
+					<li>333</li>
+				</ul></li>
+				<li>4444
+				<ul>
+					<li>444</li>
+					<li>444</li>
+					<li>444</li>
+				</ul></li>
+				<li>5555
+				<ul>
+					<li>555</li>
+					<li>555</li>
+					<li>555</li>
+				</ul></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

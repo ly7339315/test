@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+          var div = document.createElement('div');
+          var div1 = document.getElementById('two');
+          div.innerText = 'four';
+          document.body.appendChild(div);
+          // document.body.insertBefore(div,div1);
+          // document.body.replaceChild(div1,div);
+          // document.body.removeChild(div);
+          var one = document.getElementById('one');
+
+          var cloneOne = one.cloneNode(true);
+          cloneOne.innerText = 'cloneOne';
+          document.body.appendChild(cloneOne);
+          document.getElementById('one').style.border ='1px solid blue';
+
+
+          
+		}
+
+		
+	</script>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	div{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		float: left;
+		margin:0 10px;
+		text-align: center;
+		padding:  ;
+	}
+</style>
+<body>
+	<div id="one">one</div>
+	<div id='two'>two</div>
+	<div id="three">three</div>
+</body>
+
+</html>

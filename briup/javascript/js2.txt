@@ -1,0 +1,63 @@
+1.js中基本数据类型有哪些？
+	boolean
+	undefined
+	null
+	string
+	number
+2.null 和 undefined的区别是什么？
+	null表示初始值为null
+	undefined表示未初始化或者以undefined初始化
+	undefined派生自null
+	undefined == null值为true
+
+3.将其他数据类型转换为number
+   1).转换：+a，-(-a), Number(a)
+    如果是Boolean值，true和false值将分别被转换为1和0。
+	如果是数字值，只是简单的传入和返回。
+	如果是null值，返回0。
+	如果是undefined，返回NaN。
+	如果是字符串：
+	　a.  如果字符串中只包含数字时，将其转换为十进制数值，忽略前导0
+
+	　b. 如果字符串中包含有效浮点格式，如“1.1”，将其转换为对应的浮点数字，忽略前导0
+
+	　c. 如果字符串中包含有效的十六进制格式，如“0xf”，将其转换为相同大小的十进制数值
+
+	　d. 如果字符串为空，将其转换为0
+
+	　e. 如果字符串中包含除上述格式之外的字符，则将其转换为NaN
+
+   			true:1
+   			false:0
+   			undefined:NaN
+   			null:0
+
+   2).解析: parseInt():将字符串转换为整数
+		  	 如果第一个字符不是数字或者负号，parseInt() 就会返回NaN，同样的，用parseInt() 转换空字符串也会返回NaN。
+			 如果第一个字符是数字字符，parseInt()会继续解析第二个字符，直到解析完所有后续字符串或者遇到了一个非数字字符
+
+
+   			parseFloat()：将字符串转换为小数
+   				从第一个字符（位置0）开始解析每一个字符。也是一直解析到字符串末尾，或者解析到遇见一个无效的浮点数字字符为止。
+   				如果字符串中包含的是一个可解析为正数的数（没有小数点，或者小数点后都是零），parseFloat() 会返回整数。
+
+   			区别：parseFloat() 所解析的字符串中第一个小数点是有效的，而parseInt() 遇到小数点会停止解析，因为小数点并不是有效的数字字符。
+
+   			true：NaN
+   			false：NaN
+   			undefined：NaN
+   			null：NaN
+
+ 4.将其他数据类型转换为boolean
+ 	 1) !!a，Boolean(a)
+
+ 	 number；非0/Infinity     true
+ 	 		  0/NaN           false
+
+ 	 string：非空字符串       true
+ 	          空字符串        false
+ 	          null            flase
+ 	          undefined       flase
+
+ 5.将其他数据类型转换为string
+ 				a+''

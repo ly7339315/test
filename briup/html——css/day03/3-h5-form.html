@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5中的表单</title>
+	<script type="text/javascript">
+	window.onload =function(){
+		var ele=document.getElementById('download');
+		var show=document.getElementById('show');
+		console.log(ele.value);
+		// ele.value=80;
+		setInterval(function(){
+			if (ele.value>=100) {
+				ele.value=0;
+				show.innerHTML=ele.value+'%';
+			}else{
+				ele.value=ele.value+1;
+				show.innerHTML=ele.value+'%';
+			}
+		},100);
+		}
+	</script>
+</head>
+<body>
+	<form id="form" >
+		<progress id="download" value="30" max="100"></progress><output id="show">30%</output>
+		<br/>
+		<meter min="0" max="100" low="40" high="60" value="50"></meter>
+		<meter min="0" max="100" low="40" high="60" optimum="50" value="20"></meter>
+		<meter min="0" max="100" low="40" high="60" optimum="80" value="70"></meter>
+		<input type="text"  list="datasource" autocomplete="off" name="datalist"/>
+		<datalist id="datasource">
+			<option value="hello">hello</option>
+			<option value="world">world</option>
+
+		</datalist>
+		<input type="text" name="text" autocomplete="off">
+		<br/>
+		年月日date：<input type="date" name=""/>
+		<br/>
+		时间time：<input type="time" name=""/>
+		<br/>
+		年月日时间datetime-local：<input type="datetime-local" name="">
+		<br/>
+		月份month:<input type="month" name="">
+		<br/>
+		周week:<input type="week" name="">
+		<input type="color" name="">
+		<input type="number" name="">
+		<input type="email" name="">
+		<input type="url" name="">
+		<input type="tel" pattern="[0-9]{11}" name="">
+<input type="search" name="">
+<input type="range" min="0" max="100" step="10" value="50" name="">
+
+		<button>提交</button>
+ </form>
+ <input type="text" name="outinput" form="form" required="">
+
+</body>
+</html>

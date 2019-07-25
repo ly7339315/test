@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+			width: 400px;
+		}
+		table,td,th{
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		var stus = [{
+			id:1001,
+			name:'zhangsan',
+			age:12,
+			gender:'男'
+		},{
+			id:1002,
+			name:'lisi',
+			age:15,
+			gender:'男'
+		},{
+			id:1003,
+			name:'wangwu',
+			age:18,
+			gender:'男'
+		},{
+			id:1004,
+			name:'wanghong',
+			age:16,
+			gender:'女'
+		},{
+			id:1005,
+			name:'xiaohong',
+			age:10,
+			gender:'女'
+		}];
+		window.onload = function(){
+			var tbody = document.getElementsByTagName('tbody')[0];
+			var addBtn = document.getElementById('add');
+			var batchDeleteBtn = document.getElementById('batchdelete');
+
+			var str = '';
+			stus.forEach(function(item){
+				str +=`
+           <tr>
+				<td><input type="checkbox" name=""></td>
+				<td>`+item.name+`</td>
+				<td>`+item.age+`</td>
+				<td>`+item.gender+`</td>
+				<td><button>删除</button></td>
+			</tr>
+				`;
+			});
+			tbody.innerHTML = str;
+
+			tbody.onclick = function(event){
+                     var target = event.target;
+                     if(target.nodeName === 'BUTTON'){
+                     	this.removeChild(target.parentNode.parentNode);
+                     }
+			}
+			
+			batchDeleteBtn.onclick = function(){
+				var inputs = document.getElementsByTagName('input');
+				inputs = Array.prototype.slice.call(inputs,0);
+				var inputsResult = inputs.filter(function(item){
+					return item.checked === true;
+
+				});
+
+				// console.log(inputsResult);
+				if(inputsResult.length>0){
+					inputsResult.forEach(function(item){
+						tbody.removeChild(item.parentNode.parentNode);
+					});
+
+				}else{
+					alert('请选择要删除的数据')
+				}
+			}
+			addBtn.onclick = function(){
+				var newTr = document.createElement('tr');
+				var str = `
+            <tr>
+				<td><input type="checkbox" name=""></td>
+				<td>treey</td>
+				<td>15</td>
+				<td>男</td>
+				<td><button>删除</button></td>
+			</tr>
+				`;
+				newTr.innerHTML = str;
+				tbody.appendChild(newTr);
+			}
+		}
+	</script>
+</head>
+<body>
+<button id="add">新增</button>
+<button id="batchdelete">批量删除</button>
+	<table>
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>名字</th>
+				<th>年龄</th>
+				<th>性别</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td><input type="checkbox" name=""></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button>删除</button></td>
+			</tr> -->
+		</tbody>
+	</table>
+</body>
+</html>

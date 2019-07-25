@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+</head>
+<body>
+	<form action="#">
+		用户名：<input type="text" name="username" autofocus="" />
+		<br/>
+		密码：<input type="password" name="password" />
+		<br/>
+		性别：<input type="radio" checked="" name="gender" value="女" id="famale" />
+		<label for="famale">女</label>
+		<input type="radio" name="gender" value="男" id="male" />
+		<label for="male">男</label>
+		<br/>
+		爱好:
+		<input type="checkbox" name="hobby" checked="" value="basketball"/>篮球
+		<input type="checkbox" name="hobby" value="sing"/>唱歌
+		<input type="checkbox" name="hobby" value="dancing"/>跳舞
+		<br/>
+		籍贯：
+		<select name="address"  >
+			<option>请选择</option>
+			<option value="shanghai">上海</option>
+			<option value="beijing">北京</option>
+			<option value="jiangsu" selected="">江苏</option>
+			<option value="jiangxi">江西</option>
+			<option value="shanxi" disabled="">山西</option>
+		</select>
+		<br/>
+		个人简介：
+		<textarea name="info" cols="30" rows="10">
+			
+		</textarea>
+		头像：<input type="file" name="file">
+
+		
+
+		<input type="submit" value="提交" />
+		<input type="reset" name="" value="重置">
+
+		<input type="image" src="../day02/images/QQ截图20190610155110.png" width="50px" height="60px">
+
+
+
+	</form>
+	<hr/>
+	<form action="#" enctype="multipart/form-data" method="post">
+		头像：<input type="file" name="file">
+		<button>提交</button>
+
+	</form>
+	<hr/>
+	<form action="">
+		<input type="text" disabled="" name="id" value="1001">
+		<input type="text" readonly=""  name="hello" value="张三">
+
+		<button>提交</button>
+	</form>
+</body>
+</html>

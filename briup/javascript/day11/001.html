@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+document.onkeydown = function(e){
+    var obj = document.getElementById("id");
+    var x = obj.offsetLeft;
+    var y = obj.offsetTop;
+    switch ((e||event).keyCode) {
+        case 37: x -= 10 ;obj.style.transform = 'rotate('+270+'deg)'; break;
+        case 39: x += 10;obj.style.transform = 'rotate('+90+'deg)'; break;
+        case 38: y -= 10;obj.style.transform = 'rotate('+0+'deg)'; break;
+        case 40: y += 10; obj.style.transform = 'rotate('+180+'deg)';break;
+        
+    }
+    obj.style.left = x+"px";
+    obj.style.top = y+"px";
+};
+ 
+</script>
+</head>
+<body>
+	<img src="./QQ截图20190610155110.png" id="id" width="100" height="200" style="position: absolute; left: 50px;top: 50px; "  />
+
+</body>
+</html>

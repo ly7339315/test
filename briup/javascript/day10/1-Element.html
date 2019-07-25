@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.red{
+			background: red;
+		}
+		.blue{
+			background: blue;
+		}
+	</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var div = document.body.children[0];
+		// console.log(div);
+		// console.log(document.body.firstElementChild);
+		console.log(div.className);
+		console.log(div.title);
+		console.log(div.getAttribute('class'));
+		console.log(div.getAttribute('data-flag'));
+		console.log(div.style);
+		console.log(div.getAttribute('style'));
+		div.style.color = 'skyblue';
+		// div.style.backgroundColor = 'red';
+		console.log(div.style);
+		console.log(div.onclick);
+		console.log(div.getAttribute('onclick'));
+		div.title = 'hello';
+		div.setAttribute('title','world');
+		div.removeAttribute('title');
+		console.log(div.attributes);
+		console.log(div.attributes[1]);
+		div.attributes[1].nodeValue = 'blue';
+		console.log(div.attributes.getNamedItem('class'));
+		console.log(div.innerHTML);
+		console.log(div.innerText);
+		console.log(div.textContent);
+		// div.innerText = 'hello';
+		// div.innerHTML = '<h1>4548</h1>';
+		div.innerHTML = `
+              <div>
+              hello
+              </div>
+		`;
+
+		}
+		function test(){
+			//alert(1);
+			var div = document.getElementById('one');
+			//var str = 'red';
+			// if(div.className ==='red'){
+   //             str = 'blue';
+			// }
+			// div.className = str;
+			div.className = (div.className === 'red')?'blue':'red';
+
+		}
+</script>
+</head>
+
+<body>
+	hello
+	<div id="one" class="red" style="color: coral" title="我是div" onclick="test()" data-flag='1001'>
+		one
+		two
+		three
+		<span>four</span>
+	</div>
+</body>
+</html>

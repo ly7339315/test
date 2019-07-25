@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.container{
+		height: 650px;
+		border: 1px solid red;
+		display: flex;
+		/*flex-direction: column;*/
+		/*flex-direction: row;*/
+		/*flex-direction: row-reverse;*/
+		/*flex-direction: column-reverse;*/
+		/*justify-content: flex-start;*/
+		/*justify-content: flex-end;*/
+		/*justify-content: center;*/
+		/*justify-content: space-between;*/
+		/*justify-content: space-around;*/
+		/*align-items: flex-end;*/
+		/*align-items: center;*/
+		/*align-items: flex-start;*/
+        /*如果项目没有高度，拉升项目占满父元素*/
+		/*align-items: stretch;*/
+		/*文字对齐*/
+		/*align-items: baseline;*/
+		/*flex-wrap: nowrap;*/
+		/*flex-wrap: wrap;*/
+		/*align-content: flex-start;*/
+		/*align-content: flex-end;*/
+		/*align-content: center;*/
+		/*align-content: space-around;*/
+		/*align-content: space-between;*/
+		/*align-content: stretch;*/
+		/*flex-flow: row wrap;*/
+
+	}
+	.container>div{
+		/*width: 200px;*/
+		flex:1;
+		/*height: 200px;*/
+		border: 1px solid blue;
+	}
+	div.one{
+		flex-basis: 200px;
+		flex: 200px 1;
+		/*height: 100px;
+		padding: 10px;*/
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="one">one</div>
+
+		<div class="two">two</div>
+		<div class="three">three</div>
+		<!-- <div class="one">one</div>
+
+		<div class="two">two</div>
+		<div class="three">three</div>
+		<div class="one">one</div>
+
+		<div class="two">two</div>
+		<div class="three">three</div>
+		<div class="one">one</div>
+
+		<div class="two">two</div>
+		<div class="three">three</div> -->
+	</div>
+</body>
+</html>

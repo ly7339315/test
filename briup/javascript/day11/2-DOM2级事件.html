@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div = document.getElementsByTagName('div')[0];
+			//非IE8及以下
+			function handle1(){
+				alert(1);
+			}
+			function handle2(){
+				alert(2);
+			}
+
+			div.addEventListener('click',handle1,false);
+			div.addEventListener('click',handle2,false);
+
+			div.removeEventListener('click',handle1,false);
+			
+             //IE8及以下
+			//倒序执行先2后1
+			// div.attachEvent('onclick',handle1);
+			// div.attachEvent('onclick',handle2);
+
+			// div.detachEvent('onclick',handle1);
+		}
+	</script>
+</head>
+<body>
+	<div>点击我</div>
+</body>
+</html>

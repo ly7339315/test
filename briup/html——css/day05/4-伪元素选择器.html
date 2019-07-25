@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	/*section p::before{*/
+		section p::after{
+		content: '*';
+		color: red;
+	}
+	form span::before{
+		content: '*';
+		color: red;
+	}
+	div::first-letter{
+		font-size: 30px;
+		color:coral;
+	}
+	div::first-line{
+		color: navy;
+	}
+	div::selection{
+		background-color: teal;
+		color:white;
+	}
+</style>
+<body>
+<div>
+	第一段话，第一段话，第一段话，第一段话，第一段话，第一段话，第一段话
+	
+	
+</div>
+    <article>
+    	<section>
+    		<p>
+    			第一段话
+    		</p>
+    		<p>
+    			第二段话
+    		</p>
+    		<p>
+    			第三段话
+    		</p>
+    		<p>
+    			第四段话
+    		</p>
+    	</section>
+    </article>
+	<form>
+		<span>用户名：</span><input type="text" name="" required="">
+		<br/>
+		<span>密码：</span><input type="password" required="" name="">
+		<br/>
+		<input type="submit" name="">
+	</form>
+</body>
+</html>

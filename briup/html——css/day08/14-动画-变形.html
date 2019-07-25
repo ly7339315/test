@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画变形</title>
+</head>
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		background-color:cyan;
+		animation-name: myani;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		border-radius:50%;
+		display: inline-block;
+		margin:20px;
+	}
+	@keyframes myani{
+		0%{
+			transform: translate(0) 
+			rotate(0deg);
+			background-color: cyan;
+
+
+
+		}
+		100%{
+			transform: translateX(400px) 
+			rotate(360deg);
+			background-color: teal;
+		}
+	}
+</style>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table,th,td{
+			border: 1px solid #ccc;
+		}
+		table{
+			width: 500px;
+			border-collapse: collapse;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		var datas = [{
+			id:1001,
+			name:'张三',
+			age:16,
+			gender:'男'
+		},{
+			id:1002,
+			name:'李四',
+			age:19,
+			gender:'男'
+		},{
+			id:1003,
+			name:'王五',
+			age:24,
+			gender:'男'
+		},{
+			id:1004,
+			name:'丽华',
+			age:21,
+			gender:'女'
+		}];
+		window.onload = function(){
+			var dataSelect = datas;
+			var str = ``;
+			var tbody = document.getElementsByTagName('tbody')[0];
+			var add = document.getElementById('add');
+			var deletes = document.getElementById('delete');
+			var quan = document.getElementById('quan');
+			
+			dataSelect.forEach(function(item){
+				return str += `<tr>
+			    <td><input type="checkbox" name=""></td>
+				<td>`+item.id+`</td>
+				<td>`+item.name+`</td>
+				<td>`+item.age+`</td>
+				<td>`+item.gender+`</td>
+				<td><button>删除</button></td>
+			</tr>`;
+			});
+			tbody.innerHTML = str;
+			tbody.onclick = function(event){
+				var target = event.target;
+				if(target.nodeName == 'BUTTON'){
+                     this.removeChild(target.parentNode.parentNode);
+				}
+			}
+			quan.onclick = function(){
+				var inputs = document.getElementsByTagName('input');
+				inputs = Array.prototype.slice.call(inputs,5);
+			if(quan.checked == true){
+				inputs.forEach(function(item){
+					return item.checked = true;
+				});
+			}else{
+				inputs.forEach(function(item){
+					return item.checked = false;
+				});
+			}
+			}
+
+			deletes.onclick = function(){
+				var inputs = document.getElementsByTagName('input');
+				inputs = Array.prototype.slice.call(inputs,5);
+				inputs.forEach(function(item){
+					if(item.checked == true){
+						tbody.removeChild(item.parentNode.parentNode);
+					}
+				});
+
+			}
+
+			add.onclick = function(){
+				var bian = document.getElementById('bian');
+				var name = document.getElementById('name');
+				var age = document.getElementById('age');
+				var gender = document.getElementById('gender');
+				var newTr = document.createElement('tr');
+				
+				var str = ``;
+				str += `<tr>
+			    <td><input type="checkbox" name=""></td>
+				<td>`+bian.value+`</td>
+				<td>`+name.value+`</td>
+				<td>`+age.value+`</td>
+				<td>`+gender.value+`</td>
+				<td><button>删除</button></td>
+			</tr>`;
+			  newTr.innerHTML = str;
+			 tbody.appendChild(newTr);
+			}
+
+
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+编号：<input type="text" name="" id="bian">
+姓名：<input type="text" name="" id="name">
+年龄：<input type="text" name="" id="age">
+性别：<input type="text" name="" id="gender"><br>
+
+<button id="add">新增</button>
+<button id="delete">选择删除</button>
+	<table>
+		<thead>
+			<tr>
+			<th><input type="checkbox" checked="false" id="quan"></input>选择</th>
+			<th>编号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+			    <td><input type="checkbox" name=""></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button>删除</button></td>
+			</tr> -->
+		</tbody>
+	</table>
+
+</body>
+</html>

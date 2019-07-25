@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器</title>
+</head>
+<style type="text/css">
+    .btn-div{
+    	width: 100px;
+    	height: 100px;
+    }
+	.btn-div:hover>.list-div{
+		display: block;
+	}
+	.list-div{
+		display: none;
+	}
+</style>
+<body>
+	<div class="btn-div">
+		<button>显示菜单</button>
+		<div class="list-div">
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>React</li>
+		</ul>
+	</div>
+	</div>
+	
+</body>
+</html>

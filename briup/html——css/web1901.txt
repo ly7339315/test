@@ -1,0 +1,86 @@
+李
+大前端
+	webui 	android 	ios		php
+
+后端 5楼
+	Java		
+（笔记本）
+技术 - 
+------------------------
+1. 课程设置
+	1) 重构阶段(页面仔)
+		axure html5 css3 
+		-> 任意网站快速重构
+			【网易严选、链家网(首页，列表页，详细页)】
+		-> git - github
+			简历：
+				项目经验 -> 	代码仓库(仿链家网)
+										项目演示地址
+				linux
+					部署 	apache/nginx
+					上传		ftp 	vsftpd
+					配置 	80
+				https://134.175.154.93/lianjia
+				博客
+	2) dom框架 (js -> dom节点 ) 5年前技术
+		js (es5 + dom + bom)
+		jquery
+		bootstrap (组件库 vue组件封装)
+		(layui, easyui ,extjs)
+		h5 api
+			画布，拖拽，本地存在
+			项目经验 ->
+				技术栈（jquery + bootstrap）完成管理系统
+
+
+	3) 企业级框架 (angular vue react)
+		尤雨溪 （尤大）
+
+		es6
+
+		Java 微服务 spring 
+		前后台完全分离
+			react 
+			redux
+			reac-router
+			antd
+			dva
+			umi
+
+			webpack
+			babel
+			less/sass 
+			...
+
+			配合后台共同完成一个大项目
+
+	4）移动开发阶段
+		手机端开发
+			android
+			ios
+			java + 前端（pc, webapp,hybird ）
+
+			react-native (weex)
+
+	5) 服务端开发阶段
+
+		nodejs (javascript)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	var arr = [3,4,5,6,7];
+    var arr2 = [1,2,3,4,5];
+    
+    //arr.push(arr2);
+    console.log(arr);
+    document.write(arr);
+
+ //    if(Array.isArray(arr2)){
+ //       for(var i=0;i<arr2.length;i++){
+ //            arr.push(arr2[i]);
+ //       }
+ //    }
+ // console.log(arr);
+ console.log(arr.concat(arr2));
+ console.log(arr);
+console.log(arr.concat('hello'));
+
+
+Array.prototype.myConcat = function (param) {   
+	    var temp = [];
+         for(var i = 0;i<this.length;i++){
+         	temp.push(this[i]);
+         }
+
+        if(Array.isArray(param)){
+        	for(var j = 0;j<param.length;j++){temp.push(param[j]);
+
+        	}
+        }else{
+        	temp.push(param);
+        }
+
+         return temp;
+}
+
+console.log(arr.myConcat('hello'));
+console.log(arr.myConcat([3,4,5,3]))
+console.log(arr);
+</script>
+	
+</body>
+</html>

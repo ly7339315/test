@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+			width: 500px;
+		}
+		table,td,th{
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+
+		
+		var res ;
+		var tbody = document.getElementsByTagName('tbody')[0];
+		var add = document.getElementById('add');
+		var str = '';
+		var https = new XMLHttpRequest();
+		https.open('GET','http://134.175.154.93:8099/manager/category/findAllCategory');
+		https.onreadystatechange = function(){
+			if(https.status===200&&https.readyState===4){
+				// console.log(https.responseText);
+				// console.log(JSON.parse(https.responseText));
+				res = JSON.parse(https.responseText).data;
+                  res.forEach(function(item){
+				str +=`
+           <tr>
+				<td>`+item.id+`</td>
+				<td>`+item.name+`</td>
+				<td>`+item.comment+`</td>
+				<td>`+item.no+`</td>
+				<td>`+item.parent+`</td>
+				<td><button>删除</button></td>
+			</tr>
+				`;
+			});
+			tbody.innerHTML = str;
+			}
+
+		}
+		https.send();
+
+		tbody.onclick = function(event){
+                     var target = event.target;
+                     if(target.nodeName === 'BUTTON'){
+                     	var a = target.parentNode.parentNode.childNodes;
+                     	a = Array.prototype.slice.call(a,0);
+                     	var b = a[1].innerHTML;
+                     	b = Number(b);
+                     	// console.log(typeof b);
+
+                     myajax('GET','deleteCategoryById?id='+b,b);
+                     tbody.removeChild(target.parentNode.parentNode);
+                    
+                     }
+                      
+			}
+
+				add.onclick = function(){
+				
+				var name = document.getElementById('name');
+				var comment = document.getElementById('comment');
+				var no = document.getElementById('no');
+				var parent = document.getElementById('parent');
+				myajax('POST','saveOrUpdateCategory',{name:name.value,comment:comment.value,no:no.value,parent:parent.value});
+				window.onload();
+				
+			}
+
+
+       
+	
+			
+	}
+	function myajax(method,url,param){
+              
+              var http = new XMLHttpRequest();
+              var baseURL = 'http://134.175.154.93:8099/manager/category/'; 
+             http.open(method,baseURL+url);
+             http.onreadystatechange = function(){
+			if(http.status===200&&http.readyState===4){
+				// console.log(http.responseText);
+				// myajax('GET','findAllCategory','');
+
+				
+			}
+		}
+
+
+         http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+         if( typeof param =='object'){
+             http.send(encodeFormData(param));
+         }else if( typeof param =='number' || param ==''){
+              http.send();
+              // console.log(param);
+              // return http.responseText;
+              
+         }
+		}
+
+
+		function encodeFormData(data){
+				if(!data){
+					return "";
+				}
+				var pairs = [];
+				for(var name in data){
+					if(!data.hasOwnProperty(name)){
+						continue;
+					}
+					if(typeof data[name] == "function"){
+						continue;
+					}
+					var value = data[name].toString();
+					name = encodeURIComponent(name.replace("%20","+"));//编码名字
+					value = encodeURIComponent(value.replace("%20","+"));//编码值
+					pairs.push(name+"="+value);
+				}
+				return pairs.join('&');
+			}
+
+
+       // myajax('GET','deleteCategoryById?id='+1272,1272);
+         // myajax('POST','batchDeleteCategory',{ids:[1275,1276].toString()});
+     
+         // myajax('POST','saveOrUpdateCategory',{name:'text',comment:'test',no:13});
+           // myajax('GET','findAllCategory','');
+// 
+		
+	</script>
+</head>
+<body>
+
+name：<input type="text" name="" id="name">
+comment：<input type="text" name="" id="comment">
+no：<input type="text" name="" id="no">
+parent：<input type="text" name="" id="parent">
+<br>
+
+<button id="add">新增</button>
+	<table>
+		<thead>
+			<tr>
+
+				<th>id</th>
+				<th>name</th>
+				<th>comment</th>
+				<th>no</th>
+				<th>parent不能添加</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+</body>
+</html>
