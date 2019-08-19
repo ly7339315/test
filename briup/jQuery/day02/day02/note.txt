@@ -1,0 +1,94 @@
+utilEvent = {
+	bind:function(){},
+	unbind:function(){},
+	getEvent:function(){},
+	stopProp:function(){},
+	preventDef:function(){},
+	getTarget:function(){}
+};
+jQuery事件
+	1.调用事件方法
+	$('button').click(function(){});
+	$('button').mouseover(function(){});
+	2.使用bind和unbind绑定和解绑
+	$('button').bind('click',function(){});
+	$('button').unbind('click',handle);
+	3.使用on和off绑定与解绑
+	$('button').on('click',function(){});
+	$('button').off('click',handle);
+事件代理
+	body.onclick = function(event){
+		if(event.target.nodeName===''){
+
+		}
+	}
+	body代理button的点击事件
+	$('body').on('click','button',function(){});
+
+点击新增按钮，点击修改按钮，都需要弹出模态框，
+	新增模态框里：新增人的信息，表单中的表单控件的数据是空的。
+	修改模态框里：要修改人的信息，直接展示出来。
+
+新增模态框和修改模态框
+	user
+		name  张三
+		age   12
+str = '';
+function showModal(event,type){
+		//type 新增
+	if(type==='新增'){
+		str = '新增学生信息';
+	} 
+	if(type==='修改'){
+		str = '修改学生信息';
+	} 
+	<!-- 将str设置到标题那里，显示模态框 -->
+}
+
+<button onclick="showModal(event,'新增')">新增</button>
+<table>
+	<tr>
+		<!-- 操作列内容 -->
+		<td>  
+			<button>删除</button>
+			<button onclick="showModal()">修改</button>
+		</td>
+	</tr>
+</table>
+<!-- 模态框 -->
+<div style="display:none">
+	<div>标题：新增学生信息</div>
+	<div>
+		name<input type="text">
+		age<input type="text">
+	</div>
+	<div>
+		<button>提交</button>
+	</div>
+</div>
+点击新增按钮的时候，标题是'新增学生信息'
+点击修改按钮的时候，标题是'修改学生信息'
+
+新增按钮和修改按钮点击，设置同一个事件处理程序
+
+新增按钮：
+	模态框显示，设置标题，设置表单控件值为空
+修改按钮：
+	模态框显示，设置标题，设置表单控件值为当前修改的对象的内容
+
+新增按钮和修改按钮用的同一个事件处理程序，用的是同一个模态框。
+
+点击模态框中的保存按钮的时候，访问是同一个后台接口。
+
+//
+
+
+
+
+
+
+
+
+
+
+

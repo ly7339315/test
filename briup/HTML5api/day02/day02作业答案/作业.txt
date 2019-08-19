@@ -1,0 +1,4 @@
+作业
+
+放大镜
+image  鼠标滑过，获取鼠标所在的点(event.clientX screenX)，获取左上角点。方形区域，放大。

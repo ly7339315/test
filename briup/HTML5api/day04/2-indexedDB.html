@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btns = document.getElementsByTagName('button');
+
+			btns[0].onclick = function(){
+				var request = indexedDB.open('user','1.0');
+				request.onsuccess = function(event){
+					console.log('数据库连接成功');
+					console.log(this.result);
+					console.log(request.result);
+					console.log(event.target.result);
+				}
+				request.onupgradeneeded = function(){
+					console.log('版本更新');
+					var db = this.result;
+					if(db.objectStoreNames.contains('Student')){
+						db.deleteObjectStore('Student');
+					}
+					db.createObjectStore('Student',{
+						keyPath:'id',
+						autoIncrement:true
+					});
+					console.log('Student对象仓库已创建');
+				}
+
+			}
+
+			
+
+			btns[1].onclick = function(){
+				var request = indexedDB.open('user');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Student','readwrite');
+					var  store = ts.objectStore('Student');
+					// console.log(store);
+				}
+			}
+
+			btns[2].onclick = function(){
+				var request = indexedDB.open('user');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Student','readwrite');
+					var store = ts.objectStore('Student');
+					// console.log(store);
+					var req = store.put({
+					name:'zhangsan1',
+					age:12,
+					id:2
+				});
+					req.onsuccess =  function(){
+						console.log('添加成功');
+					}
+					req.onerror = function(){
+						console.log('添加失败');
+					}
+				}
+				// console.log(store);
+				
+
+			}
+
+			btns[4].onclick = function(){
+				var request = indexedDB.open('user');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Student','readwrite');
+					var store = ts.objectStore('Student');
+					// console.log(store);
+					var req = store.getAll();
+					req.onsuccess =  function(){
+						console.log('查询成功',this.result);
+					}
+					req.onerror = function(){
+						console.log('查询失败');
+					}
+				}
+				// console.log(store);
+				
+
+			}
+
+			btns[5].onclick = function(){
+				var request = indexedDB.open('user');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Student','readwrite');
+					var store = ts.objectStore('Student');
+					// console.log(store);
+					var req = store.delete(2);
+					req.onsuccess =  function(){
+						console.log('查询成功',this.result);
+					}
+					req.onerror = function(){
+						console.log('查询失败');
+					}
+				}
+				// console.log(store);
+				
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<button type="">创建对象仓库</button>
+	<button>获取对象仓库</button>
+	<button>添加数据</button>
+	<button>修改数据</button>
+	<button>查询数据</button>
+	<button>删除数据</button>
+	<button>删除对象仓库</button>
+</body>
+</html>

@@ -1,0 +1,16 @@
+let map = new Map();
+console.log(map);
+console.log(map.size);
+map.set('name','zhangsan');
+map.set('age','12');
+map.set('name','lisi');
+map.set({},'lisi');
+console.log(map);
+console.log(map.size);
+console.log(map.get('name'));
+let keys = map.keys();
+console.log(keys);
+let values = map.values();
+console.log(values);
+let entries = map.entries();
+console.log(entries);

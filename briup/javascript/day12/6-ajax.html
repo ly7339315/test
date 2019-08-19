@@ -6,9 +6,9 @@
 	<script type="text/javascript">
 
 // saveOrUpdateCategory({name:'text',comment:'test',no:13});
-deleteCategoryById(2);
+// deleteCategoryById(2);
 
-// batchDeleteCategory([273,274,275,276,277]);
+batchDeleteCategory([273,274,275,276,277]);
 
 
 function batchDeleteCategory(arr){
@@ -21,8 +21,10 @@ function batchDeleteCategory(arr){
         }
 	}
 	http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
-	http.send(encodeFormData({ids:arr.join()}));
+	http.send(encodeFormData({ids:arr}));
+	console.log(encodeFormData({ids:arr}));
 }
+
 
 
 

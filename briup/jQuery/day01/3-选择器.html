@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.outer{
+			border: 1px solid blue;
+			overflow: hidden;
+			float: left;
+			margin: 10px;
+		}
+		.inner{
+			border: 1px solid red;
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $result = $('.outer');
+			var $result = $('.outer .inner');
+			var $result = $('.outer>.inner');
+			var $result = $('.one+');
+			var $result = $('.one~*');
+
+			console.log($result);
+			var $result = $('.outer .inner:first');
+			var $result = $('.outer .inner:last');
+			var $result = $('.outer .inner:even');
+			var $result = $('.outer .inner:odd');
+			var $result = $('.outer .inner:eq(2)');
+			var $result = $('.outer .inner:lt(2)');
+			var $result = $('.outer .inner:gt(2)');
+			var $result = $('.outer .inner:not(:lt(2))');
+			var $result = $('.outer :header');
+			var $result = $('.outer :contains("o")');
+			var $result = $('.outer :empty');
+			var $result = $('.outer :parent');
+			var $result = $('.outer :has("h4")');
+
+
+
+			console.log($result);
+
+
+			$result.css('background','red');
+		});
+	</script>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+		<div class="inner one"></div>
+		<div class="inner"></div>
+		<div class="inner"></div>
+		<div class="inner"><h4>最后一个</h4></div>
+		<h2>hello</h2>
+		<h4>world</h4>
+		<!-- <div style="overflow:hidden">
+			<div class="inner"></div>
+		</div> -->
+	</div>
+	<div class="outer">
+		<div class="inner"></div>
+		<div class="inner one"></div>
+		<div class="inner"></div>
+		<div class="inner"></div>
+		<div class="inner"></div>
+	</div>
+	<div class="outer">
+		<div class="inner"></div>
+		<div class="inner"></div>
+		<div class="inner"></div>
+	</div>
+</body>
+</html>

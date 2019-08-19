@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.parent{
+			/*border: 1px solid blue;*/
+			width:400px;
+			height: 400px;
+			position: relative;
+			margin-left: 100px;
+			margin-top: 100px;
+
+
+		}
+		canvas{
+			/*border: 1px solid red;
+			margin: 0;
+			padding: 0;*/
+		}
+		#big-canvas{
+			position: absolute;
+			left: 400px;
+			top: 100px;
+			display: none;
+		}
+		#bd-canvas{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.5;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById('canvas');
+			var context = canvas.getContext('2d');
+			var bigCanvas = document.getElementById('big-canvas');
+			var bigContext = bigCanvas.getContext('2d');
+			var bdCanvas = document.getElementById('bd-canvas');
+			var bdContext = bdCanvas.getContext('2d');
+			var parent = document.getElementsByClassName('parent')[0];
+			var img = new Image();
+			img.src = 'images/2.JPG';
+			img.onload = function(){
+				context.drawImage(img,0,0,400,400);
+				
+			}
+
+			var img2 = new Image();
+			img2.src = 'images/bd.jpg';
+			img2.onload = function(){
+				bdContext.drawImage(img2,0,0,80,80);
+			
+
+			}
+			// bigContext.drawImage(canvas,100,100,100,100,0,0,200,200);
+			parent.onmousemove = function(event){
+				bigCanvas.style.display = 'block';
+				bdCanvas.style.display = 'block';
+
+				var sx = event.pageX-40-parent.offsetLeft;
+				var sy = event.pageY-40-parent.offsetTop;
+				// event.clientX;
+				// event.clientY;
+
+				// event.pageX;
+				// event.pageY;
+
+				// event.screenX;
+				// event.screenY;
+				sx<0?sx=0:sx=sx;
+				sy<0?sy=0:sy=sy;
+				sx>320?sx=320:sx=sx;
+				sy>320?sy=320:sy=sy;
+
+					bigContext.clearRect(0,0,200,200);
+					bigContext.drawImage(canvas,sx,sy,80,80,0,0,200,200);
+				bdCanvas.style.left = sx+'px';
+				bdCanvas.style.top = sy+'px';
+
+			// 	bigContext.clearRect(0,0,200,200);
+			// bigContext.drawImage(canvas,sx,sy,80,80,0,0,200,200);
+
+			}
+			
+			parent.onmouseleave = function(){
+				bigCanvas.style.display = 'none';
+				bdCanvas.style.display = 'none';
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="parent">
+	<canvas id="canvas" width="400px" height="400px"></canvas>
+	<canvas id="big-canvas" width="200px" height="200px"></canvas>
+	<canvas id="bd-canvas" width="80px" height="80px"></canvas>
+</div>
+</body>
+</html>

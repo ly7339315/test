@@ -1,0 +1,409 @@
+<!DOCTYPE>
+<head>
+<title>jquery多级树型标签</title>
+<meta charset="utf-8">
+
+<!--主要样式-->
+<link rel="stylesheet" type="text/css" href="css/tagTree.css" />
+
+<!--图标样式-->
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/tagTree.js"></script>
+<script type="text/javascript">
+$(function(){
+	var add = [
+	{
+	 id:1,
+	 name:'根编目',
+	 cate_path:'1'
+	},
+	{
+		id:2,
+		name:'Java课程',
+		cate_path:'1.2'
+	},
+	{
+		id:3,
+		name:'Spring课程',
+		cate_path:'1.2.3'
+	},
+	{
+		id:4,
+		name:'SpringBoot课程',
+		cate_path:'1.2.3.4'
+	},
+	{
+		id:5,
+		name:'Web课程',
+		cate_path:'1.5'
+	},
+	{
+		id:6,
+		name:'Servlet课程',
+		cate_path:'1.2.6'
+	},
+	{
+		id:7,
+		name:'React课程',
+		cate_path:'1.5.7'
+	},
+	{
+		id:8,
+		name:'redux课程',
+		cate_path:'1.5.7.8'
+	},
+	{
+		id:9,
+		name:'html5课程',
+		cate_path:'1.5.9'
+	},
+	{
+		id:10,
+		name:'css课程',
+		cate_path:'1.5.10'
+	},
+	{
+		id:11,
+		name:'js课程',
+		cate_path:'1.5.11'
+	},
+	{
+		id:12,
+		name:'div课程',
+		cate_path:'1.5.9.12'
+	},
+	{
+		id:13,
+		name:'var课程',
+		cate_path:'1.5.11.13'
+	},
+	{
+		id:14,
+		name:'border课程',
+		cate_path:'1.5.10.14'
+	},
+	{
+		id:15,
+		name:'Boot课程',
+		cate_path:'1.2.3.4.15'
+	},
+	{
+		id:16,
+		name:'Servlet-1111课程',
+		cate_path:'1.2.6.16'
+	},
+	{
+		id:17,
+		name:'Servlet-2222课程',
+		cate_path:'1.2.6.17'
+	},
+	{
+		id:18,
+		name:'Servlet-2222-1111课程',
+		cate_path:'1.2.6.17.18'
+	},
+	{
+		id:19,
+		name:'Servlet-2222-1111-1111课程',
+		cate_path:'1.2.6.17.18.19'
+	},
+	{
+		id:20,
+		name:'Servlet-2222-2222课程',
+		cate_path:'1.2.6.17.20'
+	}
+	];
+
+
+	// console.log(add);
+var arr = [];
+var arrs = [];
+	add.forEach(function(item){
+    	var cate = item.cate_path.split('.');
+    	if(cate.length>1){
+    		item.parent_id = cate.splice(cate.length-2,1);
+    		item.parent_id = item.parent_id.join();
+    		// console.log(item.parent_id);
+    	}
+    	// console.log(item);
+    	
+	});
+	
+    	for(var i=1;i<=add.length;i++){
+    		add.forEach(function(item){
+               if(item.parent_id==i){
+               	arr.push(item);
+               }
+    		});
+    		arrs[i]=arr;
+    		arr=[];
+    	}
+    	// console.log(arrs);
+    	// console.log(add);
+    	arrs.forEach(function(item,index){
+    		// console.log(index);
+    		for(var i = 0;i<=add.length-1;i++){
+    			if(index==add[i].id){
+    				add[i].child=item;
+    			}
+    			
+    		}
+    	});
+    	console.log(add);
+
+    	add.forEach(function(item){
+    		item.children=item.child;
+    	});
+    	// console.log(add);
+    	arr[0]=add[0];
+    	// console.log(arr);
+	   	
+
+	   	$('#chang').click(function(event) {
+	   		var request = indexedDB.open('Users','1.0');
+				request.onsuccess = function(event){
+					console.log('数据库连接成功');
+					// console.log(this.result);
+					// console.log(request.result);
+					// console.log(event.target.result);
+				}
+				request.onupgradeneeded = function(){
+					console.log('版本更新');
+					var db = this.result;
+					if(db.objectStoreNames.contains('Kechen')){
+						db.deleteObjectStore('Kechen');
+					}
+					db.createObjectStore('Kechen',{
+						keyPath:'id',
+						autoIncrement:true
+					});
+					console.log('Kechen对象仓库已创建');
+				}
+
+	   			   	});
+
+	   	$('#tian').click(function(event) {
+	   		var request = indexedDB.open('Users');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Kechen','readwrite');
+					var store = ts.objectStore('Kechen');
+					// console.log(store);
+					var req = store.put({
+				 	id:''+$('#id').val()+'',
+					name:''+$('#name').val()+'',
+
+					cate_path:''+$('#cate_path').val()+'',
+					
+				});
+
+					req.onsuccess =  function(){
+						console.log('添加成功');
+					}
+					req.onerror = function(){
+						console.log('添加失败');
+					}
+				}
+				
+	   	});
+	   	$('#shan').click(function(event) {
+	   		var request = indexedDB.open('Users');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Kechen','readwrite');
+					var store = ts.objectStore('Kechen');
+					// console.log(store);
+					var req = store.delete($('#id').val());
+					req.onsuccess =  function(){
+						console.log('删除成功');
+					}
+					req.onerror = function(){
+						console.log('删除失败');
+					}
+				}
+	   	});
+
+	   	$('#cha').click(function(event) {
+	   		var request = indexedDB.open('Users');
+				request.onsuccess = function(){
+					var db = this.result;
+					// var ts = db.transaction(['Student'],'readwrite');
+					var ts = db.transaction('Kechen','readwrite');
+					var store = ts.objectStore('Kechen');
+					// console.log(store);
+					var req = store.getAll();
+					req.onsuccess =  function(){
+						console.log('查询成功',this.result);
+						var add = this.result;
+						console.log(add);
+						var arr = [];
+var arrs = [];
+	add.forEach(function(item){
+    	var cate = item.cate_path.split('.');
+    	if(cate.length>1){
+    		item.parent_id = cate.splice(cate.length-2,1);
+    		item.parent_id = item.parent_id.join();
+    		// console.log(item.parent_id);
+    	}
+    	// console.log(item);
+    	
+	});
+	
+    	for(var i=1;i<=add.length;i++){
+    		add.forEach(function(item){
+               if(item.parent_id==i){
+               	arr.push(item);
+               }
+    		});
+    		arrs[i]=arr;
+    		arr=[];
+    	}
+    	// console.log(arrs);
+    	// console.log(add);
+    	arrs.forEach(function(item,index){
+    		// console.log(index);
+    		for(var i = 0;i<=add.length-1;i++){
+    			if(index==add[i].id){
+    				add[i].child=item;
+    			}
+    			
+    		}
+    	});
+    	console.log(add);
+
+    	add.forEach(function(item){
+    		item.children=item.child;
+    	});
+    	// console.log(add);
+    	arr[0]=add[1];
+
+    	$("#test").tagTree({
+    	id:"",
+    	data:arr,
+    	fold:false,
+    	multiple:false,
+    	check:function(val){
+    		console.log('chekc:'+val);
+    		console.log($(this).tagTreeValues());
+    	},
+    	done:function(){
+    		console.log('tagTree is ok!');
+    	}
+    });
+						
+					}
+					req.onerror = function(){
+						console.log('查询失败');
+					}
+
+				}
+				
+	   	});
+
+	
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var data =[
+	   //  {
+	   //  	name:"1号标签",
+	   //  	value:"1",
+	   //  	children:[
+	   //  		{
+	   //  			name:"11号标签",
+			 //    	value:"11",
+			 //    	children:[]
+	   //  		},
+				// {
+	   //  			name:"12号标签",
+			 //    	value:"12",
+			 //    	children:[]
+	   //  		},
+				// {
+	   //  			name:"13号标签",
+			 //    	value:"13",
+			 //    	children:[
+			 //    		{
+			 //    			name:"131号标签",
+				// 	    	value:"131",
+				// 	    	children:[]
+	   //  				}
+	   //  			]
+	   //  		}
+	   //  	]
+	   //  },
+	   //  {
+	   //  	name:"2号标签",
+	   //  	value:"2",
+	   //  	children:[
+	   //  		{
+	   //  			name:"21号标签",
+			 //    	value:"21",
+			 //    	children:[]
+	   //  		},
+				// {
+	   //  			name:"22号标签",
+			 //    	value:"22",
+			 //    	children:[]
+	   //  		}
+	   //  	]
+	   //  },
+	   //  {
+	   //  	name:"3号标签",
+	   //  	value:"3",
+	   //  	children:[]
+	   //  }
+    // ];
+
+    $("#test").tagTree({
+    	id:"",
+    	data:arr,
+    	fold:false,
+    	multiple:false,
+    	check:function(val){
+    		console.log('chekc:'+val);
+    		console.log($(this).tagTreeValues());
+    	},
+    	done:function(){
+    		console.log('tagTree is ok!');
+    	}
+    });
+});
+
+
+</script>
+</head>
+
+<body>
+id:<input type="text" id="id" name="">
+
+name:<input type="text" id="name" name="">
+cate_path:<input type="text" id="cate_path" name="">
+<br>
+<button id="chang">创建对象仓库</button>
+<button id="tian">添加数据</button>
+<button id='cha'>查询</button>
+<button id="shan">填入id删除</button>
+	<div id="test"></div>
+
+</body>
+
+</html>

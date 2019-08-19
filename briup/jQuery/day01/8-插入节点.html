@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.outer{
+			border: 1px solid red;
+		}
+	</style>
+	<script type="text/javascript" src='../js/jquery-3.4.1.min.js'></script>
+	<script type="text/javascript">
+		$(function(){
+			var $newSpan = $('<span>world</span>');
+			// console.log($newSpan);
+
+			// $('.outer').append($newSpan);
+			// var $clone = $newSpan.clone();
+			// $('.outer').prepend($clone);
+
+			 // $('.outer').after($newSpan);
+			$('.outer').before($newSpan);
+
+			
+
+
+		});
+	</script>
+</head>
+<body>
+	<div class="outer">
+		<span>hello</span>
+	</div>
+	<div class="outer">
+		<span>hello</span>
+	</div>
+</body>
+</html>

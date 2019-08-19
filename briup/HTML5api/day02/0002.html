@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById('canvas');
+			var context = canvas.getContext('2d');
+			context.lineWidth = 1;
+			context.fillStyle = 'coral';
+			context.fillRect(100,100,100,100);
+			context.strokeStyle = 'pink';
+			context.strokeRect(200,100,100,100);
+			context.clearRect(120,120,60,60);
+			context.beginPath();
+			context.arc(150,250,50,0,Math.PI*2);
+			context.closePath();
+			context.fillStyle = 'green';
+			context.fill();
+			context.beginPath();
+			context.arc(250,250,50,0,Math.PI*2);
+			context.closePath();
+			context.strokeStyle = 'skyblue';
+			context.stroke();
+			context.beginPath();
+			context.moveTo(0,0);
+			context.lineTo(100,100);
+			context.lineTo(200,0);
+			context.lineTo(300,100);
+			context.lineTo(400,0);
+			context.lineTo(500,100);
+			
+			context.bezierCurveTo(0,250,500,250,0,0);
+			context.quadraticCurveTo(250,500,500,0);
+			// context.closePath();
+			context.strokeStyle='red';
+			context.stroke();
+
+			context.beginPath();
+			// var gradient = context.createLinearGradient(100,350,300,350);
+			var gradient = context.createRadialGradient(200,350,20,200,350,50);
+
+			gradient.addColorStop(0,'red');
+			gradient.addColorStop(1,'blue');
+			context.fillStyle = gradient;
+			context.fillRect(100,300,200,100);
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="500px" height="500px" style="border:1px solid red">
+		
+	</canvas>
+</body>
+</html>

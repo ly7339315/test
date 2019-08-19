@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>看点资讯</title>
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src='./js/jquery-3.4.1.min.js'></script>
+<script type="text/javascript" src='bootstrap-3.3.7/js/bootstrap.min.js'></script>
+<script type="text/javascript" src='./js/index.js'></script>
+<script type="text/javascript" src='./js/ajax.js'></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/exporting.js"></script>
+<script type="text/javascript" src="js/series-label.js"></script>
+<script type="text/javascript" src="js/annotations.js"></script>
+<script type="text/javascript"  src="js/streamgraph.js"></script>
+<script type="text/javascript" src="js/sunburst.js"></script>
+<script type="text/javascript" src="js/highcharts-more.js"></script>
+<script type="text/javascript" src="js/oldie.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+
+<body>
+
+	<div class="bodyDiv ">
+		<div class="leftDiv ">
+			<div class="leftHeader">
+			<img src="images/QQ图片20190807160658.jpg" alt="">
+				看点资讯
+			</div>
+			<div class="leftBody">
+				<ul>
+					<li ><span class="glyphicon glyphicon-home" style="left:20px"></span>首页<span class="glyphicon glyphicon-menu-right" style="right:30px"></span></li>
+					<li><span class="glyphicon glyphicon-th-list" style="left:20px"></span>栏目管理<span class="glyphicon glyphicon-menu-right" style="right:30px"></span></li>
+					<li><span class="glyphicon glyphicon-list-alt" style="left:20px"></span>资讯管理<span class="glyphicon glyphicon-menu-right" style="right:30px"></span></li>
+					<li><span class="glyphicon glyphicon-user" style="left:20px"></span>用户管理<span class="glyphicon glyphicon-menu-right" style="right:30px "></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="rightDiv ">
+			<div class="rightHeader">
+				<div class="hea"><span class="glyphicon glyphicon-list" style="left:20px ;top:10px" ></span><span class="glyphicon glyphicon-volume-up" style="right:10px; top:10px"><span class="badge" style="right:-10px; top:0px ; background-color: red">4</span></span></div>
+				<div class="hee">乔峰&nbsp<span class="glyphicon glyphicon-menu-right"></span></div>
+			</div>
+			<div class="rightBody"></div>
+		</div>
+	</div>
+	
+	<div class="modal " id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button class="btn btn-default close" data-dismiss='modal'>&times</button>
+				<span class="modal-title">模态框的标题</span></div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-2 control-label" id="ming" for="name">名称：</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="" id="name">
+							</div>
+						</div>
+						<div class="form-group" id="lanm">
+							<label class="col-sm-2 control-label" id="lan" for="parent">父栏目：</label>
+							<div class="col-sm-10">
+								<select id="parent" style="width:200px;height:30px;">
+									<option value="">请选择</option>
+									
+								</select>
+							</div>
+						</div>		
+						<div class="form-group">
+							<label class="col-sm-2 control-label" id="miao" for="comment">描述：</label>
+							<div class="col-sm-10">
+								<textarea name="" id="comment" style="width:100%"></textarea>
+							</div>
+						</div>			
+					</form>
+				</div>
+				<div class="modal-footer"><button class="btn btn-danger" data-dismiss='modal'>取消</button>
+				<button class="btn btn-info" id="to-save">保存</button></div>
+			</div>
+		 </div>
+	</div>
+
+	
+</body>
+</html>

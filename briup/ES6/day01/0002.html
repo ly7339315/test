@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	  var arr = [8,19,3,12,5,4,2,3,7,6,9];
+	 var arr1= [];
+for(var j = 0;j<arr.length;j++){
+	 for(var i = 0;i<arr.length;i++){
+	 	if(arr[i] > arr[i+1]){
+	 		var a = arr[i];
+	 		arr[i] = arr[i+1];
+	 		arr[i+1] = a;
+
+	 	}
+	 	arr1[i]=arr[i];
+	 		 }
+	 		 }
+
+	  console.log(arr1);
+
+
+	  var arr = [{
+      name:'math',
+      commit_time:100,
+      pass_time:90
+    },{
+      name:'algorithm',
+      commit_time:10,
+      pass_time:8
+    },{
+      name:'string',
+      commit_time:50,
+      pass_time:1
+    },{
+      name:'dp',
+      commit_time:100,
+      pass_time:50
+    }]
+    var arr1 = [];
+    arr.forEach(function(item){
+    	var num = item.pass_time/item.commit_time;
+    	if(0<=num&&num <= 0.3){
+    		num = 5;
+    	}else if(0.3 <= num && num <= 0.6){
+    		num  = 4;
+    	}else if(0.6 <= num&&num <= 1){
+    		num = 3;
+    	}
+    	arr1.push({name:item.name,level:num});
+    });
+    console.log(arr1);
+</script>
+</html>

@@ -1,0 +1,3248 @@
+<!-- 首页 -->
+<div>
+<div id="home">
+	<div id="containers"></div>
+	<div id="container"></div>
+	<div id="containerx"></div>
+	<div id="containerv" style="width: 800px; height: 310px; margin: 0 auto">
+	<div style="margin-top: 100px; text-align: center" id="loading">
+		<i class="fa fa-spinner fa-spin"></i> 从外部源加载数据
+	</div>
+</div>
+<div id="containert" style="min-width: 420px; max-width: 600px; height: 400px; margin: 0 auto"></div>
+<div style="display:none">
+	<!-- Source: http://or.water.usgs.gov/cgi-bin/grapher/graph_windrose.pl -->
+	<table id="freq" border="0" cellspacing="0" cellpadding="0">
+		<tr nowrap bgcolor="#CCCCFF">
+			<th colspan="9" class="hdr">Table of Frequencies (percent)</th>
+		</tr>
+		<tr nowrap bgcolor="#CCCCFF">
+			<th class="freq">Direction</th>
+			<th class="freq">< 0.5 m/s</th>
+			<th class="freq">0.5-2 m/s</th>
+			<th class="freq">2-4 m/s</th>
+			<th class="freq">4-6 m/s</th>
+			<th class="freq">6-8 m/s</th>
+			<th class="freq">8-10 m/s</th>
+			<th class="freq">> 10 m/s</th>
+			<th class="freq">Total</th>
+		</tr>
+		<tr nowrap>
+			<td class="dir">N</td>
+			<td class="data">1.81</td>
+			<td class="data">1.78</td>
+			<td class="data">0.16</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">3.75</td>
+		</tr>		
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">NNE</td>
+			<td class="data">0.62</td>
+			<td class="data">1.09</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">1.71</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">NE</td>
+			<td class="data">0.82</td>
+			<td class="data">0.82</td>
+			<td class="data">0.07</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">1.71</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">ENE</td>
+			<td class="data">0.59</td>
+			<td class="data">1.22</td>
+			<td class="data">0.07</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">1.88</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">E</td>
+			<td class="data">0.62</td>
+			<td class="data">2.20</td>
+			<td class="data">0.49</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">3.32</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">ESE</td>
+			<td class="data">1.22</td>
+			<td class="data">2.01</td>
+			<td class="data">1.55</td>
+			<td class="data">0.30</td>
+			<td class="data">0.13</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">5.20</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">SE</td>
+			<td class="data">1.61</td>
+			<td class="data">3.06</td>
+			<td class="data">2.37</td>
+			<td class="data">2.14</td>
+			<td class="data">1.74</td>
+			<td class="data">0.39</td>
+			<td class="data">0.13</td>
+			<td class="data">11.45</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">SSE</td>
+			<td class="data">2.04</td>
+			<td class="data">3.42</td>
+			<td class="data">1.97</td>
+			<td class="data">0.86</td>
+			<td class="data">0.53</td>
+			<td class="data">0.49</td>
+			<td class="data">0.00</td>
+			<td class="data">9.31</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">S</td>
+			<td class="data">2.66</td>
+			<td class="data">4.74</td>
+			<td class="data">0.43</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">7.83</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">SSW</td>
+			<td class="data">2.96</td>
+			<td class="data">4.14</td>
+			<td class="data">0.26</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">7.37</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">SW</td>
+			<td class="data">2.53</td>
+			<td class="data">4.01</td>
+			<td class="data">1.22</td>
+			<td class="data">0.49</td>
+			<td class="data">0.13</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">8.39</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">WSW</td>
+			<td class="data">1.97</td>
+			<td class="data">2.66</td>
+			<td class="data">1.97</td>
+			<td class="data">0.79</td>
+			<td class="data">0.30</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">7.70</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">W</td>
+			<td class="data">1.64</td>
+			<td class="data">1.71</td>
+			<td class="data">0.92</td>
+			<td class="data">1.45</td>
+			<td class="data">0.26</td>
+			<td class="data">0.10</td>
+			<td class="data">0.00</td>
+			<td class="data">6.09</td>
+		</tr>
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">WNW</td>
+			<td class="data">1.32</td>
+			<td class="data">2.40</td>
+			<td class="data">0.99</td>
+			<td class="data">1.61</td>
+			<td class="data">0.33</td>
+			<td class="data">0.00</td>
+			<td class="data">0.00</td>
+			<td class="data">6.64</td>
+		</tr>
+		<tr nowrap>
+			<td class="dir">NW</td>
+			<td class="data">1.58</td>
+			<td class="data">4.28</td>
+			<td class="data">1.28</td>
+			<td class="data">0.76</td>
+			<td class="data">0.66</td>
+			<td class="data">0.69</td>
+			<td class="data">0.03</td>
+			<td class="data">9.28</td>
+		</tr>		
+		<tr nowrap bgcolor="#DDDDDD">
+			<td class="dir">NNW</td>
+			<td class="data">1.51</td>
+			<td class="data">5.00</td>
+			<td class="data">1.32</td>
+			<td class="data">0.13</td>
+			<td class="data">0.23</td>
+			<td class="data">0.13</td>
+			<td class="data">0.07</td>
+			<td class="data">8.39</td>
+		</tr>
+		<tr nowrap>
+			<td class="totals">Total</td>
+			<td class="totals">25.53</td>
+			<td class="totals">44.54</td>
+			<td class="totals">15.07</td>
+			<td class="totals">8.52</td>
+			<td class="totals">4.31</td>
+			<td class="totals">1.81</td>
+			<td class="totals">0.23</td>
+			<td class="totals"> </td>
+		</tr>
+	</table>
+</div>
+</div>
+<script type="text/javascript">
+	var colors = Highcharts.getOptions().colors;
+Highcharts.chart('containers', {
+	chart: {
+		type: 'streamgraph',
+		marginBottom: 30,
+		zoomType: 'x'
+	},
+	// Make sure connected countries have similar colors
+	colors: [
+		colors[0],
+		colors[1],
+		colors[2],
+		colors[3],
+		colors[4],
+		// East Germany, West Germany and Germany
+		Highcharts.color(colors[5]).brighten(0.2).get(),
+		Highcharts.color(colors[5]).brighten(0.1).get(),
+		colors[5],
+		colors[6],
+		colors[7],
+		colors[8],
+		colors[9],
+		colors[0],
+		colors[1],
+		colors[3],
+		// Soviet Union, Russia
+		Highcharts.color(colors[2]).brighten(-0.1).get(),
+		Highcharts.color(colors[2]).brighten(-0.2).get(),
+		Highcharts.color(colors[2]).brighten(-0.3).get()
+	],
+	title: {
+		floating: true,
+		align: 'left',
+		text: '冬季奥运会奖牌分布'
+	},
+	subtitle: {
+		floating: true,
+		align: 'left',
+		y: 30,
+		text: '数据来源： <a href="https://www.sports-reference.com/olympics/winter/1924/">sports-reference.com</a>'
+	},
+	xAxis: {
+		maxPadding: 0,
+		type: 'category',
+		crosshair: true,
+		categories: [
+			'',
+			'1924',
+			'1928',
+			'1932',
+			'1936',
+			'1940',
+			'1944',
+			'1948',
+			'1952',
+			'1956',
+			'1960',
+			'1964',
+			'1968',
+			'1972',
+			'1976',
+			'1980',
+			'1984',
+			'1988',
+			'1992',
+			'1994',
+			'1998',
+			'2002',
+			'2006',
+			'2010',
+			'2014'
+		],
+		labels: {
+			align: 'left',
+			reserveSpace: false,
+			rotation: 270
+		},
+		lineWidth: 0,
+		margin: 20,
+		tickWidth: 0
+	},
+	yAxis: {
+		visible: false,
+		startOnTick: false,
+		endOnTick: false
+	},
+	legend: {
+		enabled: false
+	},
+	annotations: [{
+		labels: [{
+			point: {
+				x: 5.5,
+				xAxis: 0,
+				y: 30,
+				yAxis: 0
+			},
+			text: '二战期间冬奥会取消'
+		}, {
+			point: {
+				x: 18,
+				xAxis: 0,
+				y: 90,
+				yAxis: 0
+			},
+			text: '苏联解体，德国统一'
+		}],
+		labelOptions: {
+			backgroundColor: 'rgba(255,255,255,0.5)',
+			borderColor: 'silver'
+		}
+	}],
+	plotOptions: {
+		series: {
+			label: {
+				minFontSize: 5,
+				maxFontSize: 15,
+				style: {
+					color: 'rgba(255,255,255,0.75)'
+				}
+			}
+		}
+	},
+	// Data parsed with olympic-medals.node.js
+	series: [{
+		"name": "芬兰",
+		"data": [
+			0, 11, 4, 3, 6, 0, 0, 6, 9, 7, 8, 10, 5, 5, 7, 9, 13, 7, 7, 6, 12, 7, 9, 5, 5
+		]
+	}, {
+		"name": "奥地利",
+		"data": [
+			0, 3, 4, 2, 4, 0, 0, 8, 8, 11, 6, 12, 11, 5, 6, 7, 1, 10, 21, 9, 17, 17, 23, 16, 17
+		]
+	}, {
+		"name": "瑞典",
+		"data": [
+			0, 2, 5, 3, 7, 0, 0, 10, 4, 10, 7, 7, 8, 4, 2, 4, 8, 6, 4, 3, 3, 7, 14, 11, 15
+		]
+	}, {
+		"name": "挪威",
+		"data": [
+			0, 17, 15, 10, 15, 0, 0, 10, 16, 4, 6, 15, 14, 12, 7, 10, 9, 5, 20, 26, 25, 25, 19, 23, 26
+		]
+	}, {
+		"name": "美国",
+		"data": [
+			0, 4, 6, 12, 4, 0, 0, 9, 11, 7, 10, 7, 7, 8, 10, 12, 8, 6, 11, 13, 13, 34, 25, 37, 28
+		]
+	}, {
+		"name": "东德",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 14, 19, 23, 24, 25, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "西德",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 5, 10, 5, 4, 8, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "德国",
+		"data": [
+			0, 0, 1, 2, 6, 0, 0, 0, 7, 2, 8, 9, 0, 0, 0, 0, 0, 0, 26, 24, 29, 36, 29, 30, 19
+		]
+	}, {
+		"name": "新西兰",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2, 2, 9, 9, 6, 4, 0, 7, 4, 4, 11, 8, 9, 8, 24
+		]
+	}, {
+		"name": "意大利",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 1, 4, 4, 5, 4, 2, 2, 5, 14, 20, 10, 13, 11, 5, 8
+		]
+	}, {
+		"name": "加拿大",
+		"data": [
+			0, 1, 1, 7, 1, 0, 0, 3, 2, 3, 4, 3, 3, 1, 3, 2, 4, 5, 7, 13, 15, 17, 24, 26, 25
+		]
+	}, {
+		"name": "瑞士",
+		"data": [
+			0, 3, 1, 1, 3, 0, 0, 10, 2, 6, 2, 0, 6, 10, 5, 5, 5, 15, 3, 9, 7, 11, 14, 9, 11
+		]
+	}, {
+		"name": "英国",
+		"data": [
+			0, 4, 1, 0, 3, 0, 0, 2, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 2, 1, 2, 1, 1, 4
+		]
+	}, {
+		"name": "法国",
+		"data": [
+			0, 3, 1, 1, 1, 0, 0, 5, 1, 0, 3, 7, 9, 3, 1, 1, 3, 2, 9, 5, 8, 11, 9, 11, 15
+		]
+	}, {
+		"name": "匈牙利",
+		"data": [
+			0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "联合队（前苏联独联体）",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "前苏联",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 21, 25, 13, 16, 27, 22, 25, 29, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "俄罗斯",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 18, 13, 22, 15, 33
+		]
+	}, {
+		"name": "日本",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 3, 0, 1, 1, 1, 7, 5, 10, 2, 1, 5, 8
+		]
+	}, {
+		"name": "捷克斯洛伐克",
+		"data": [
+			0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 4, 3, 1, 1, 6, 3, 3, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "波兰",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 2, 6, 6
+		]
+	}, {
+		"name": "西班牙",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "中国",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 8, 8, 11, 11, 9
+		]
+	}, {
+		"name": "韩国",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 6, 4, 11, 14, 8
+		]
+	}, {
+		"name": "捷克共和国",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 6, 8
+		]
+	}, {
+		"name": "白俄罗斯",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1, 1, 3, 6
+		]
+	}, {
+		"name": "哈萨克斯坦",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 0, 0, 1, 1
+		]
+	}, {
+		"name": "保加利亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 3, 1, 0, 0
+		]
+	}, {
+		"name": "丹麦",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
+		]
+	}, {
+		"name": "乌克兰",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0, 2, 0, 2
+		]
+	}, {
+		"name": "澳大利亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 3
+		]
+	}, {
+		"name": "比利时",
+		"data": [
+			0, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0
+		]
+	}, {
+		"name": "罗马",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "列支敦斯登",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "南斯拉夫",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "卢森堡",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "新西兰",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "朝鲜",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
+		]
+	}, {
+		"name": "斯洛伐克",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1
+		]
+	}, {
+		"name": "克罗地亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 3, 3, 1
+		]
+	}, {
+		"name": "斯洛文尼亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 3, 8
+		]
+	}, {
+		"name": "拉脱维亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4
+		]
+	}, {
+		"name": "爱沙尼亚",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 1, 0
+		]
+	}, {
+		"name": "乌兹别克斯坦",
+		"data": [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
+		]
+	}],
+	exporting: {
+		sourceWidth: 800,
+		sourceHeight: 600
+	}
+});
+
+
+</script>
+<script type="text/javascript">
+	Highcharts.setOptions({
+    lang: {
+        thousandsSep: ','
+    }
+});
+var data = [{
+    'id': '0.0',
+    'parent': '',
+    'name': 'The World'
+}, {
+    'id': '1.3',
+    'parent': '0.0',
+    'name': '亚洲'
+}, {
+    'id': '1.1',
+    'parent': '0.0',
+    'name': '非洲'
+}, {
+    'id': '1.2',
+    'parent': '0.0',
+    'name': '美洲'
+}, {
+    'id': '1.4',
+    'parent': '0.0',
+    'name': '欧洲'
+}, {
+    'id': '1.5',
+    'parent': '0.0',
+    'name': '大洋洲'
+},
+
+/* Africa */
+{
+    'id': '2.1',
+    'parent': '1.1',
+    'name': '东非'
+},
+
+{
+    'id': '3.1',
+    'parent': '2.1',
+    'name': '埃塞俄比亚',
+    'value': 104957438
+}, {
+    'id': '3.2',
+    'parent': '2.1',
+    'name': '坦桑尼亚',
+    'value': 57310019
+}, {
+    'id': '3.3',
+    'parent': '2.1',
+    'name': '肯尼亚',
+    'value': 49699862
+}, {
+    'id': '3.4',
+    'parent': '2.1',
+    'name': '乌干达',
+    'value': 42862958
+}, {
+    'id': '3.5',
+    'parent': '2.1',
+    'name': '莫桑比克',
+    'value': 29668834
+}, {
+    'id': '3.6',
+    'parent': '2.1',
+    'name': '马达加斯加岛',
+    'value': 25570895
+}, {
+    'id': '3.7',
+    'parent': '2.1',
+    'name': '马拉维',
+    'value': 18622104
+}, {
+    'id': '3.8',
+    'parent': '2.1',
+    'name': '赞比亚',
+    'value': 17094130
+}, {
+    'id': '3.9',
+    'parent': '2.1',
+    'name': '津巴布韦',
+    'value': 16529904
+}, {
+    'id': '3.10',
+    'parent': '2.1',
+    'name': '索马里',
+    'value': 14742523
+}, {
+    'id': '3.11',
+    'parent': '2.1',
+    'name': '南苏丹',
+    'value': 12575714
+}, {
+    'id': '3.12',
+    'parent': '2.1',
+    'name': '卢旺达',
+    'value': 12208407
+}, {
+    'id': '3.13',
+    'parent': '2.1',
+    'name': '布隆迪',
+    'value': 10864245
+}, {
+    'id': '3.14',
+    'parent': '2.1',
+    'name': '厄立特里亚国',
+    'value': 5068831
+}, {
+    'id': '3.15',
+    'parent': '2.1',
+    'name': '毛里求斯',
+    'value': 1265138
+}, {
+    'id': '3.16',
+    'parent': '2.1',
+    'name': '吉布提',
+    'value': 956985
+}, {
+    'id': '3.17',
+    'parent': '2.1',
+    'name': '留尼汪岛',
+    'value': 876562
+}, {
+    'id': '3.18',
+    'parent': '2.1',
+    'name': '科摩罗',
+    'value': 813912
+}, {
+    'id': '3.19',
+    'parent': '2.1',
+    'name': '马约特岛',
+    'value': 253045
+}, {
+    'id': '3.20',
+    'parent': '2.1',
+    'name': '塞舌尔群岛',
+    'value': 94737
+},
+
+{
+    'id': '2.5',
+    'parent': '1.1',
+    'name': '西非'
+},
+
+{
+    'id': '3.42',
+    'parent': '2.5',
+    'name': '尼日利亚',
+    'value': 190886311
+}, {
+    'id': '3.43',
+    'parent': '2.5',
+    'name': '加纳',
+    'value': 28833629
+}, {
+    'id': '3.44',
+    'parent': '2.5',
+    'name': '科特迪瓦共和国',
+    'value': 24294750
+}, {
+    'id': '3.45',
+    'parent': '2.5',
+    'name': '尼日尔',
+    'value': 21477348
+}, {
+    'id': '3.46',
+    'parent': '2.5',
+    'name': '布基纳法索',
+    'value': 19193382
+}, {
+    'id': '3.47',
+    'parent': '2.5',
+    'name': '马里',
+    'value': 18541980
+}, {
+    'id': '3.48',
+    'parent': '2.5',
+    'name': '塞内加尔',
+    'value': 15850567
+}, {
+    'id': '3.49',
+    'parent': '2.5',
+    'name': '几内亚共和国',
+    'value': 12717176
+}, {
+    'id': '3.50',
+    'parent': '2.5',
+    'name': '贝宁',
+    'value': 11175692
+}, {
+    'id': '3.51',
+    'parent': '2.5',
+    'name': '多哥',
+    'value': 7797694
+}, {
+    'id': '3.52',
+    'parent': '2.5',
+    'name': '塞拉利昂',
+    'value': 7557212
+}, {
+    'id': '3.53',
+    'parent': '2.5',
+    'name': '利比里亚',
+    'value': 4731906
+}, {
+    'id': '3.54',
+    'parent': '2.5',
+    'name': '毛里塔尼亚',
+    'value': 4420184
+}, {
+    'id': '3.55',
+    'parent': '2.5',
+    'name': 'The Gambia',
+    'value': 2100568
+}, {
+    'id': '3.56',
+    'parent': '2.5',
+    'name': 'Guinea-Bissau',
+    'value': 1861283
+}, {
+    'id': '3.57',
+    'parent': '2.5',
+    'name': 'Cabo Verde',
+    'value': 546388
+}, {
+    'id': '3.58',
+    'parent': '2.5',
+    'name': 'Saint Helena, Ascension and Tristan da Cunha',
+    'value': 4049
+},
+
+{
+    'id': '2.3',
+    'parent': '1.1',
+    'name': '北非'
+},
+
+{
+    'id': '3.30',
+    'parent': '2.3',
+    'name': 'Egypt',
+    'value': 97553151
+}, {
+    'id': '3.31',
+    'parent': '2.3',
+    'name': 'Algeria',
+    'value': 41318142
+}, {
+    'id': '3.32',
+    'parent': '2.3',
+    'name': 'Sudan',
+    'value': 40533330
+}, {
+    'id': '3.33',
+    'parent': '2.3',
+    'name': 'Morocco',
+    'value': 35739580
+}, {
+    'id': '3.34',
+    'parent': '2.3',
+    'name': 'Tunisia',
+    'value': 11532127
+}, {
+    'id': '3.35',
+    'parent': '2.3',
+    'name': 'Libya',
+    'value': 6374616
+}, {
+    'id': '3.36',
+    'parent': '2.3',
+    'name': 'Western Sahara',
+    'value': 552628
+},
+
+{
+    'id': '2.2',
+    'parent': '1.1',
+    'name': 'Central Africa'
+},
+
+{
+    'id': '3.21',
+    'parent': '2.2',
+    'name': 'Democratic Republic of the Congo',
+    'value': 81339988
+}, {
+    'id': '3.22',
+    'parent': '2.2',
+    'name': 'Angola',
+    'value': 29784193
+}, {
+    'id': '3.23',
+    'parent': '2.2',
+    'name': 'Cameroon',
+    'value': 24053727
+}, {
+    'id': '3.24',
+    'parent': '2.2',
+    'name': 'Chad',
+    'value': 14899994
+}, {
+    'id': '3.25',
+    'parent': '2.2',
+    'name': 'Congo',
+    'value': 5260750
+}, {
+    'id': '3.26',
+    'parent': '2.2',
+    'name': 'Central African Republic',
+    'value': 4659080
+}, {
+    'id': '3.27',
+    'parent': '2.2',
+    'name': 'Gabon',
+    'value': 2025137
+}, {
+    'id': '3.28',
+    'parent': '2.2',
+    'name': 'Equatorial Guinea',
+    'value': 1267689
+}, {
+    'id': '3.29',
+    'parent': '2.2',
+    'name': 'Sao Tome and Principe',
+    'value': 204327
+},
+
+{
+    'id': '2.4',
+    'parent': '1.1',
+    'name': '南美洲'
+},
+
+{
+    'id': '3.37',
+    'parent': '2.4',
+    'name': '南非',
+    'value': 56717156
+}, {
+    'id': '3.38',
+    'parent': '2.4',
+    'name': 'Namibia',
+    'value': 2533794
+}, {
+    'id': '3.39',
+    'parent': '2.4',
+    'name': 'Botswana',
+    'value': 2291661
+}, {
+    'id': '3.40',
+    'parent': '2.4',
+    'name': 'Lesotho',
+    'value': 2233339
+}, {
+    'id': '3.41',
+    'parent': '2.4',
+    'name': 'Swaziland',
+    'value': 1367254
+},
+
+/***********/
+
+/* America */
+{
+    'id': '2.9',
+    'parent': '1.2',
+    'name': '南美洲'
+},
+
+{
+    'id': '3.98',
+    'parent': '2.9',
+    'name': 'Brazil',
+    'value': 209288278
+}, {
+    'id': '3.99',
+    'parent': '2.9',
+    'name': 'Colombia',
+    'value': 49065615
+}, {
+    'id': '3.100',
+    'parent': '2.9',
+    'name': 'Argentina',
+    'value': 44271041
+}, {
+    'id': '3.101',
+    'parent': '2.9',
+    'name': 'Peru',
+    'value': 32165485
+}, {
+    'id': '3.102',
+    'parent': '2.9',
+    'name': 'Venezuela',
+    'value': 31977065
+}, {
+    'id': '3.103',
+    'parent': '2.9',
+    'name': 'Chile',
+    'value': 18054726
+}, {
+    'id': '3.104',
+    'parent': '2.9',
+    'name': 'Ecuador',
+    'value': 16624858
+}, {
+    'id': '3.105',
+    'parent': '2.9',
+    'name': 'Bolivia',
+    'value': 11051600
+}, {
+    'id': '3.106',
+    'parent': '2.9',
+    'name': 'Paraguay',
+    'value': 6811297
+}, {
+    'id': '3.107',
+    'parent': '2.9',
+    'name': 'Uruguay',
+    'value': 3456750
+}, {
+    'id': '3.108',
+    'parent': '2.9',
+    'name': 'Guyana',
+    'value': 777859
+}, {
+    'id': '3.109',
+    'parent': '2.9',
+    'name': 'Suriname',
+    'value': 563402
+}, {
+    'id': '3.110',
+    'parent': '2.9',
+    'name': 'French Guiana',
+    'value': 282731
+}, {
+    'id': '3.111',
+    'parent': '2.9',
+    'name': 'Falkland Islands',
+    'value': 2910
+},
+
+{
+    'id': '2.8',
+    'parent': '1.2',
+    'name': '北美洲'
+},
+
+{
+    'id': '3.93',
+    'parent': '2.8',
+    'name': '美国',
+    'value': 324459463
+}, {
+    'id': '3.94',
+    'parent': '2.8',
+    'name': '加拿大',
+    'value': 36624199
+}, {
+    'id': '3.95',
+    'parent': '2.8',
+    'name': '百慕大群岛',
+    'value': 61349
+}, {
+    'id': '3.96',
+    'parent': '2.8',
+    'name': '格陵兰',
+    'value': 56480
+}, {
+    'id': '3.97',
+    'parent': '2.8',
+    'name': 'Saint Pierre and Miquelon',
+    'value': 6320
+},
+
+{
+    'id': '2.7',
+    'parent': '1.2',
+    'name': '中美洲'
+},
+
+{
+    'id': '3.85',
+    'parent': '2.7',
+    'name': '墨西哥',
+    'value': 129163276
+}, {
+    'id': '3.86',
+    'parent': '2.7',
+    'name': '危地马拉',
+    'value': 16913503
+}, {
+    'id': '3.87',
+    'parent': '2.7',
+    'name': 'Honduras',
+    'value': 9265067
+}, {
+    'id': '3.88',
+    'parent': '2.7',
+    'name': 'El Salvador',
+    'value': 6377853
+}, {
+    'id': '3.89',
+    'parent': '2.7',
+    'name': 'Nicaragua',
+    'value': 6217581
+}, {
+    'id': '3.90',
+    'parent': '2.7',
+    'name': 'Costa Rica',
+    'value': 4905769
+}, {
+    'id': '3.91',
+    'parent': '2.7',
+    'name': 'Panama',
+    'value': 4098587
+}, {
+    'id': '3.92',
+    'parent': '2.7',
+    'name': 'Belize',
+    'value': 374681
+},
+
+{
+    'id': '2.6',
+    'parent': '1.2',
+    'name': 'Caribbean'
+},
+
+{
+    'id': '3.59',
+    'parent': '2.6',
+    'name': 'Cuba',
+    'value': 11484636
+}, {
+    'id': '3.60',
+    'parent': '2.6',
+    'name': 'Haiti',
+    'value': 10981229
+}, {
+    'id': '3.61',
+    'parent': '2.6',
+    'name': 'Dominican Republic',
+    'value': 10766998
+}, {
+    'id': '3.62',
+    'parent': '2.6',
+    'name': 'Puerto Rico',
+    'value': 3663131
+}, {
+    'id': '3.63',
+    'parent': '2.6',
+    'name': 'Jamaica',
+    'value': 2890299
+}, {
+    'id': '3.64',
+    'parent': '2.6',
+    'name': 'Trinidad and Tobago',
+    'value': 1369125
+}, {
+    'id': '3.65',
+    'parent': '2.6',
+    'name': 'Guadeloupe',
+    'value': 449568
+}, {
+    'id': '3.66',
+    'parent': '2.6',
+    'name': 'Bahamas',
+    'value': 395361
+}, {
+    'id': '3.67',
+    'parent': '2.6',
+    'name': 'Martinique',
+    'value': 384896
+}, {
+    'id': '3.68',
+    'parent': '2.6',
+    'name': 'Barbados',
+    'value': 285719
+}, {
+    'id': '3.69',
+    'parent': '2.6',
+    'name': 'Saint Lucia',
+    'value': 178844
+}, {
+    'id': '3.70',
+    'parent': '2.6',
+    'name': 'Curaçao',
+    'value': 160539
+}, {
+    'id': '3.71',
+    'parent': '2.6',
+    'name': 'Saint Vincent and the Grenadines',
+    'value': 109897
+}, {
+    'id': '3.72',
+    'parent': '2.6',
+    'name': 'Grenada',
+    'value': 107825
+}, {
+    'id': '3.73',
+    'parent': '2.6',
+    'name': 'Aruba',
+    'value': 105264
+}, {
+    'id': '3.74',
+    'parent': '2.6',
+    'name': 'United States Virgin Islands',
+    'value': 104901
+}, {
+    'id': '3.75',
+    'parent': '2.6',
+    'name': 'Antigua and Barbuda',
+    'value': 102012
+}, {
+    'id': '3.76',
+    'parent': '2.6',
+    'name': 'Dominica',
+    'value': 73925
+}, {
+    'id': '3.77',
+    'parent': '2.6',
+    'name': 'Cayman Islands',
+    'value': 61559
+}, {
+    'id': '3.78',
+    'parent': '2.6',
+    'name': 'Saint Kitts and Nevis',
+    'value': 55345
+}, {
+    'id': '3.79',
+    'parent': '2.6',
+    'name': 'Sint Maarten',
+    'value': 40120
+}, {
+    'id': '3.80',
+    'parent': '2.6',
+    'name': 'Turks and Caicos Islands',
+    'value': 35446
+}, {
+    'id': '3.81',
+    'parent': '2.6',
+    'name': 'British Virgin Islands',
+    'value': 31196
+}, {
+    'id': '3.82',
+    'parent': '2.6',
+    'name': 'Caribbean Netherlands',
+    'value': 25398
+}, {
+    'id': '3.83',
+    'parent': '2.6',
+    'name': 'Anguilla',
+    'value': 14909
+}, {
+    'id': '3.84',
+    'parent': '2.6',
+    'name': 'Montserrat',
+    'value': 5177
+},
+/***********/
+
+/* Asia */
+{
+    'id': '2.13',
+    'parent': '1.3',
+    'name': '南亚'
+},
+
+{
+    'id': '3.136',
+    'parent': '2.13',
+    'name': '印度',
+    'value': 1339180127
+}, {
+    'id': '3.137',
+    'parent': '2.13',
+    'name': '巴基斯坦',
+    'value': 197015955
+}, {
+    'id': '3.138',
+    'parent': '2.13',
+    'name': '孟加拉国',
+    'value': 164669751
+}, {
+    'id': '3.139',
+    'parent': '2.13',
+    'name': '伊朗',
+    'value': 81162788
+}, {
+    'id': '3.140',
+    'parent': '2.13',
+    'name': '阿富汗',
+    'value': 35530081
+}, {
+    'id': '3.141',
+    'parent': '2.13',
+    'name': '尼泊尔',
+    'value': 29304998
+}, {
+    'id': '3.142',
+    'parent': '2.13',
+    'name': '斯里兰卡',
+    'value': 20876917
+}, {
+    'id': '3.143',
+    'parent': '2.13',
+    'name': '不丹',
+    'value': 807610
+}, {
+    'id': '3.144',
+    'parent': '2.13',
+    'name': '马尔代夫',
+    'value': 436330
+},
+
+{
+    'id': '2.11',
+    'parent': '1.3',
+    'name': '东亚'
+},
+
+{
+    'id': '3.117',
+    'parent': '2.11',
+    'name': '中国',
+    'value': 1409517397 + 622567 + 7364883 +23626456
+}, {
+    'id': '3.118',
+    'parent': '2.11',
+    'name': '日本',
+    'value': 127484450
+}, {
+    'id': '3.119',
+    'parent': '2.11',
+    'name': '南韩',
+    'value': 50982212
+}, {
+    'id': '3.120',
+    'parent': '2.11',
+    'name': '朝鲜',
+    'value': 25490965
+}, /*{
+    'id': '3.121',
+    'parent': '2.11',
+    'name': '台湾省（中国）',
+    'value': 23626456
+}, {
+    'id': '3.122',
+    'parent': '2.11',
+    'name': '香港特别行政区（中国）',
+    'value': 7364883
+}, */{
+    'id': '3.123',
+    'parent': '2.11',
+    'name': '蒙古',
+    'value': 3075647
+}, /*{
+    'id': '3.124',
+    'parent': '2.11',
+    'name': '澳门特别行政区（中国）',
+    'value': 622567
+},*/
+
+{
+    'id': '2.12',
+    'parent': '1.3',
+    'name': '东南亚'
+},
+
+{
+    'id': '3.125',
+    'parent': '2.12',
+    'name': '印尼',
+    'value': 263991379
+}, {
+    'id': '3.126',
+    'parent': '2.12',
+    'name': '菲律宾',
+    'value': 104918090
+}, {
+    'id': '3.127',
+    'parent': '2.12',
+    'name': '越南',
+    'value': 95540800
+}, {
+    'id': '3.128',
+    'parent': '2.12',
+    'name': '泰国',
+    'value': 69037513
+}, {
+    'id': '3.129',
+    'parent': '2.12',
+    'name': '缅甸',
+    'value': 53370609
+}, {
+    'id': '3.130',
+    'parent': '2.12',
+    'name': '马来西亚',
+    'value': 31624264
+}, {
+    'id': '3.131',
+    'parent': '2.12',
+    'name': '柬埔寨',
+    'value': 16005373
+}, {
+    'id': '3.132',
+    'parent': '2.12',
+    'name': '老挝',
+    'value': 6858160
+}, {
+    'id': '3.133',
+    'parent': '2.12',
+    'name': '新加坡',
+    'value': 5708844
+}, {
+    'id': '3.134',
+    'parent': '2.12',
+    'name': '东帝汶民主共和国',
+    'value': 1296311
+}, {
+    'id': '3.135',
+    'parent': '2.12',
+    'name': '文莱',
+    'value': 428697
+    // 'color': ''
+},
+
+{
+    'id': '2.14',
+    'parent': '1.3',
+    'name': '西亚'
+},
+
+{
+    'id': '3.145',
+    'parent': '2.14',
+    'name': '土耳其',
+    'value': 80745020
+}, {
+    'id': '3.146',
+    'parent': '2.14',
+    'name': '伊拉克',
+    'value': 38274618
+}, {
+    'id': '3.147',
+    'parent': '2.14',
+    'name': '沙特阿拉伯',
+    'value': 32938213
+}, {
+    'id': '3.148',
+    'parent': '2.14',
+    'name': '也门',
+    'value': 28250420
+}, {
+    'id': '3.149',
+    'parent': '2.14',
+    'name': '叙利亚',
+    'value': 18269868
+}, {
+    'id': '3.150',
+    'parent': '2.14',
+    'name': '阿塞拜疆',
+    'value': 9827589
+}, {
+    'id': '3.151',
+    'parent': '2.14',
+    'name': '约旦',
+    'value': 9702353
+}, {
+    'id': '3.152',
+    'parent': '2.14',
+    'name': '阿拉伯联合酋长国',
+    'value': 9400145
+}, {
+    'id': '3.153',
+    'parent': '2.14',
+    'name': '以色列',
+    'value': 8321570
+}, {
+    'id': '3.154',
+    'parent': '2.14',
+    'name': '黎巴嫩',
+    'value': 6082357
+}, {
+    'id': '3.155',
+    'parent': '2.14',
+    'name': '勒斯坦',
+    'value': 4920724
+}, {
+    'id': '3.156',
+    'parent': '2.14',
+    'name': '阿曼',
+    'value': 4636262
+}, {
+    'id': '3.157',
+    'parent': '2.14',
+    'name': '科威特',
+    'value': 4136528
+}, {
+    'id': '3.158',
+    'parent': '2.14',
+    'name': '乔治亚州',
+    'value': 3912061
+}, {
+    'id': '3.159',
+    'parent': '2.14',
+    'name': '美尼亚',
+    'value': 2930450
+}, {
+    'id': '3.160',
+    'parent': '2.14',
+    'name': '卡塔尔',
+    'value': 2639211
+}, {
+    'id': '3.161',
+    'parent': '2.14',
+    'name': '巴林王国',
+    'value': 1492584
+},
+
+{
+    'id': '2.10',
+    'parent': '1.3',
+    'name': '中亚'
+},
+
+{
+    'id': '3.112',
+    'parent': '2.10',
+    'name': '乌兹别克斯坦',
+    'value': 31910641
+}, {
+    'id': '3.113',
+    'parent': '2.10',
+    'name': '哈萨克斯坦',
+    'value': 18204499
+}, {
+    'id': '3.114',
+    'parent': '2.10',
+    'name': '塔吉克斯坦',
+    'value': 8921343
+}, {
+    'id': '3.115',
+    'parent': '2.10',
+    'name': '吉尔吉斯斯坦',
+    'value': 6045117
+}, {
+    'id': '3.116',
+    'parent': '2.10',
+    'name': '土库曼斯坦',
+    'value': 5758075
+},
+/***********/
+
+/* Europe */
+{
+    'id': '2.15',
+    'parent': '1.4',
+    'name': '东欧'
+},
+
+{
+    'id': '3.162',
+    'parent': '2.15',
+    'name': '俄罗斯',
+    'value': 143989754
+}, {
+    'id': '3.163',
+    'parent': '2.15',
+    'name': '乌克兰',
+    'value': 44222947
+}, {
+    'id': '3.164',
+    'parent': '2.15',
+    'name': '波兰',
+    'value': 38170712
+}, {
+    'id': '3.165',
+    'parent': '2.15',
+    'name': '罗马尼亚',
+    'value': 19679306
+}, {
+    'id': '3.166',
+    'parent': '2.15',
+    'name': '捷克',
+    'value': 10618303
+}, {
+    'id': '3.167',
+    'parent': '2.15',
+    'name': '匈牙利',
+    'value': 9721559
+}, {
+    'id': '3.168',
+    'parent': '2.15',
+    'name': '白俄罗斯',
+    'value': 9468338
+}, {
+    'id': '3.169',
+    'parent': '2.15',
+    'name': '保加利亚',
+    'value': 7084571
+}, {
+    'id': '3.170',
+    'parent': '2.15',
+    'name': '斯洛伐克',
+    'value': 5447662
+}, {
+    'id': '3.171',
+    'parent': '2.15',
+    'name': '摩尔多瓦',
+    'value': 4051212
+}, {
+    'id': '3.172',
+    'parent': '2.15',
+    'name': '塞浦路斯',
+    'value': 1179551
+},
+
+{
+    'id': '2.16',
+    'parent': '1.4',
+    'name': '北欧'
+},
+
+{
+    'id': '3.173',
+    'parent': '2.16',
+    'name': '英国',
+    'value': 66181585
+}, {
+    'id': '3.174',
+    'parent': '2.16',
+    'name': '瑞典',
+    'value': 9910701
+}, {
+    'id': '3.175',
+    'parent': '2.16',
+    'name': '丹麦',
+    'value': 5733551
+}, {
+    'id': '3.176',
+    'parent': '2.16',
+    'name': '芬兰',
+    'value': 5523231
+}, {
+    'id': '3.177',
+    'parent': '2.16',
+    'name': '挪威',
+    'value': 5305383
+}, {
+    'id': '3.178',
+    'parent': '2.16',
+    'name': '爱尔兰',
+    'value': 4761657
+}, {
+    'id': '3.179',
+    'parent': '2.16',
+    'name': '立陶宛',
+    'value': 2890297
+}, {
+    'id': '3.180',
+    'parent': '2.16',
+    'name': '拉脱维亚',
+    'value': 1949670
+}, {
+    'id': '3.181',
+    'parent': '2.16',
+    'name': '爱沙尼亚',
+    'value': 1309632
+}, {
+    'id': '3.182',
+    'parent': '2.16',
+    'name': '冰岛',
+    'value': 335025
+}, {
+    'id': '3.183',
+    'parent': '2.16',
+    'name': 'Guernsey and  Jersey',
+    'value': 165314
+}, {
+    'id': '3.184',
+    'parent': '2.16',
+    'name': 'Isle of Man',
+    'value': 84287
+}, {
+    'id': '3.185',
+    'parent': '2.16',
+    'name': 'Faroe Islands',
+    'value': 49290
+},
+
+{
+    'id': '2.17',
+    'parent': '1.4',
+    'name': 'Southern Europe'
+},
+
+{
+    'id': '3.186',
+    'parent': '2.17',
+    'name': 'Italy',
+    'value': 59359900
+}, {
+    'id': '3.187',
+    'parent': '2.17',
+    'name': 'Spain',
+    'value': 46354321
+}, {
+    'id': '3.188',
+    'parent': '2.17',
+    'name': 'Greece',
+    'value': 11159773
+}, {
+    'id': '3.189',
+    'parent': '2.17',
+    'name': 'Portugal',
+    'value': 10329506
+}, {
+    'id': '3.190',
+    'parent': '2.17',
+    'name': 'Serbia',
+    'value': 8790574
+}, {
+    'id': '3.191',
+    'parent': '2.17',
+    'name': 'Croatia',
+    'value': 4189353
+}, {
+    'id': '3.192',
+    'parent': '2.17',
+    'name': 'Bosnia and Herzegovina',
+    'value': 3507017
+}, {
+    'id': '3.193',
+    'parent': '2.17',
+    'name': 'Albania',
+    'value': 2930187
+}, {
+    'id': '3.194',
+    'parent': '2.17',
+    'name': 'Republic of Macedonia',
+    'value': 2083160
+}, {
+    'id': '3.195',
+    'parent': '2.17',
+    'name': 'Slovenia',
+    'value': 2079976
+}, {
+    'id': '3.196',
+    'parent': '2.17',
+    'name': 'Montenegro',
+    'value': 628960
+}, {
+    'id': '3.197',
+    'parent': '2.17',
+    'name': 'Malta',
+    'value': 430835
+}, {
+    'id': '3.198',
+    'parent': '2.17',
+    'name': 'Andorra',
+    'value': 76965
+}, {
+    'id': '3.199',
+    'parent': '2.17',
+    'name': 'Gibraltar',
+    'value': 34571
+}, {
+    'id': '3.200',
+    'parent': '2.17',
+    'name': 'San Marino',
+    'value': 33400
+}, {
+    'id': '3.201',
+    'parent': '2.17',
+    'name': 'Vatican City',
+    'value': 792
+},
+
+{
+    'id': '2.18',
+    'parent': '1.4',
+    'name': 'Western Europe'
+},
+
+{
+    'id': '3.202',
+    'parent': '2.18',
+    'name': 'Germany',
+    'value': 82114224
+}, {
+    'id': '3.203',
+    'parent': '2.18',
+    'name': 'France',
+    'value': 64979548
+}, {
+    'id': '3.204',
+    'parent': '2.18',
+    'name': 'Netherlands',
+    'value': 17035938
+}, {
+    'id': '3.205',
+    'parent': '2.18',
+    'name': 'Belgium',
+    'value': 11429336
+}, {
+    'id': '3.206',
+    'parent': '2.18',
+    'name': 'Austria',
+    'value': 8735453
+}, {
+    'id': '3.207',
+    'parent': '2.18',
+    'name': 'Switzerland',
+    'value': 8476005
+}, {
+    'id': '3.208',
+    'parent': '2.18',
+    'name': 'Luxembourg',
+    'value': 583455
+}, {
+    'id': '3.209',
+    'parent': '2.18',
+    'name': 'Monaco',
+    'value': 38695
+}, {
+    'id': '3.210',
+    'parent': '2.18',
+    'name': 'Liechtenstein',
+    'value': 37922
+},
+/***********/
+
+/* Oceania */
+{
+    'id': '2.19',
+    'parent': '1.5',
+    'name': 'Australia and New Zealand'
+},
+
+{
+    'id': '3.211',
+    'parent': '2.19',
+    'name': 'Australia',
+    'value': 24450561
+}, {
+    'id': '3.212',
+    'parent': '2.19',
+    'name': 'New Zealand',
+    'value': 4705818
+},
+
+{
+    'id': '2.20',
+    'parent': '1.5',
+    'name': 'Melanesia'
+},
+
+{
+    'id': '3.213',
+    'parent': '2.20',
+    'name': 'Papua New Guinea'
+}, {
+    'id': '3.214',
+    'parent': '2.20',
+    'name': 'Fiji',
+    'value': 905502
+}, {
+    'id': '3.215',
+    'parent': '2.20',
+    'name': 'Solomon Islands',
+    'value': 611343
+}, {
+    'id': '3.216',
+    'parent': '2.20',
+    'name': 'New Caledonia',
+    'value': 276255
+}, {
+    'id': '3.217',
+    'parent': '2.20',
+    'name': 'Vanuatu',
+    'value': 276244
+},
+
+{
+    'id': '2.21',
+    'parent': '1.5',
+    'name': 'Micronesia'
+},
+
+{
+    'id': '3.218',
+    'parent': '2.21',
+    'name': 'Guam',
+    'value': 164229
+}, {
+    'id': '3.219',
+    'parent': '2.21',
+    'name': 'Kiribati',
+    'value': 116398
+}, {
+    'id': '3.220',
+    'parent': '2.21',
+    'name': 'Federated States of Micronesia',
+    'value': 105544
+}, {
+    'id': '3.221',
+    'parent': '2.21',
+    'name': 'Northern Mariana Islands',
+    'value': 55144
+}, {
+    'id': '3.222',
+    'parent': '2.21',
+    'name': 'Marshall Islands',
+    'value': 53127
+}, {
+    'id': '3.223',
+    'parent': '2.21',
+    'name': 'Palau',
+    'value': 21729
+}, {
+    'id': '3.224',
+    'parent': '2.21',
+    'name': 'Nauru',
+    'value': 11359
+},
+
+{
+    'id': '2.22',
+    'parent': '1.5',
+    'name': 'Polynesia'
+},
+
+{
+    'id': '3.225',
+    'parent': '2.22',
+    'name': 'French Polynesia',
+    'value': 283007
+}, {
+    'id': '3.226',
+    'parent': '2.22',
+    'name': 'Samoa',
+    'value': 196440
+}, {
+    'id': '3.227',
+    'parent': '2.22',
+    'name': 'Tonga',
+    'value': 108020
+}, {
+    'id': '3.228',
+    'parent': '2.22',
+    'name': 'American Samoa',
+    'value': 55641
+}, {
+    'id': '3.229',
+    'parent': '2.22',
+    'name': 'Cook Islands',
+    'value': 17380
+}, {
+    'id': '3.230',
+    'parent': '2.22',
+    'name': 'Wallis and Futuna',
+    'value': 11773
+}, {
+    'id': '3.231',
+    'parent': '2.22',
+    'name': 'Tuvalu',
+    'value': 11192
+}, {
+    'id': '3.232',
+    'parent': '2.22',
+    'name': 'Niue',
+    'value': 1618
+}, {
+    'id': '3.233',
+    'parent': '2.22',
+    'name': 'Tokelau',
+    'value': 1300
+}];
+
+// Splice in transparent for the center circle
+Highcharts.getOptions().colors.splice(0, 0, 'transparent');
+
+
+Highcharts.chart('container', {
+
+    chart: {
+        height: '100%'
+    },
+
+    title: {
+        text: '2017 世界人口分布'
+    },
+    subtitle: {
+        text: '数据来源： <href="https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)">Wikipedia</a>'
+    },
+    series: [{
+        type: "sunburst",
+        data: data,
+        allowDrillToNode: true,
+        cursor: 'pointer',
+        dataLabels: {
+            /**
+             * A custom formatter that returns the name only if the inner arc
+             * is longer than a certain pixel size, so the shape has place for
+             * the label.
+             */
+            formatter: function () {
+                var shape = this.point.node.shapeArgs;
+
+                var innerArcFraction = (shape.end - shape.start) / (2 * Math.PI);
+                var perimeter = 2 * Math.PI * shape.innerR;
+
+                var innerArcPixels = innerArcFraction * perimeter;
+
+                if (innerArcPixels > 16) {
+                    return this.point.name;
+                }
+            }
+        },
+        levels: [{
+            level: 2,
+            colorByPoint: true,
+            dataLabels: {
+                rotationMode: 'parallel'
+            }
+        },
+        {
+            level: 3,
+            colorVariation: {
+                key: 'brightness',
+                to: -0.5
+            }
+        }, {
+            level: 4,
+            colorVariation: {
+                key: 'brightness',
+                to: 0.5
+            }
+        }]
+
+    }],
+    tooltip: {
+        headerFormat: "",
+        pointFormat: '<b>{point.name}</b>的人口数量是：<b>{point.value}</b>'
+    }
+});
+</script>
+<script type="text/javascript">
+	Highcharts.chart('containerx', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: '2014 年世界各地碳排放量'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.y}m CO<sub>2</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name: '欧洲',
+        data: [{
+            name: 'Germany',
+            value: 767.1
+        }, {
+            name: 'Croatia',
+            value: 20.7
+        },
+        {
+            name: "Belgium",
+            value: 97.2
+        },
+        {
+            name: "Czech Republic",
+            value: 111.7
+        },
+        {
+            name: "Netherlands",
+            value: 158.1
+        },
+        {
+            name: "Spain",
+            value: 241.6
+        },
+        {
+            name: "Ukraine",
+            value: 249.1
+        },
+        {
+            name: "Poland",
+            value: 298.1
+        },
+        {
+            name: "France",
+            value: 323.7
+        },
+        {
+            name: "Romania",
+            value: 78.3
+        },
+        {
+            name: "United Kingdom",
+            value: 415.4
+        }, {
+            name: "Turkey",
+            value: 353.2
+        }, {
+            name: "Italy",
+            value: 337.6
+        },
+        {
+            name: "Greece",
+            value: 71.1
+        },
+        {
+            name: "Austria",
+            value: 69.8
+        },
+        {
+            name: "Belarus",
+            value: 67.7
+        },
+        {
+            name: "Serbia",
+            value: 59.3
+        },
+        {
+            name: "Finland",
+            value: 54.8
+        },
+        {
+            name: "Bulgaria",
+            value: 51.2
+        },
+        {
+            name: "Portugal",
+            value: 48.3
+        },
+        {
+            name: "Norway",
+            value: 44.4
+        },
+        {
+            name: "Sweden",
+            value: 44.3
+        },
+        {
+            name: "Hungary",
+            value: 43.7
+        },
+        {
+            name: "Switzerland",
+            value: 40.2
+        },
+        {
+            name: "Denmark",
+            value: 40
+        },
+        {
+            name: "Slovakia",
+            value: 34.7
+        },
+        {
+            name: "Ireland",
+            value: 34.6
+        },
+        {
+            name: "Croatia",
+            value: 20.7
+        },
+        {
+            name: "Estonia",
+            value: 19.4
+        },
+        {
+            name: "Slovenia",
+            value: 16.7
+        },
+        {
+            name: "Lithuania",
+            value: 12.3
+        },
+        {
+            name: "Luxembourg",
+            value: 10.4
+        },
+        {
+            name: "Macedonia",
+            value: 9.5
+        },
+        {
+            name: "Moldova",
+            value: 7.8
+        },
+        {
+            name: "Latvia",
+            value: 7.5
+        },
+        {
+            name: "Cyprus",
+            value: 7.2
+        }]
+    }, {
+        name: '非洲',
+        data: [{
+            name: "Senegal",
+            value: 8.2
+        },
+        {
+            name: "Cameroon",
+            value: 9.2
+        },
+        {
+            name: "Zimbabwe",
+            value: 13.1
+        },
+        {
+            name: "Ghana",
+            value: 14.1
+        },
+        {
+            name: "Kenya",
+            value: 14.1
+        },
+        {
+            name: "Sudan",
+            value: 17.3
+        },
+        {
+            name: "Tunisia",
+            value: 24.3
+        },
+        {
+            name: "Angola",
+            value: 25
+        },
+        {
+            name: "Libya",
+            value: 50.6
+        },
+        {
+            name: "Ivory Coast",
+            value: 7.3
+        },
+        {
+            name: "Morocco",
+            value: 60.7
+        },
+        {
+            name: "Ethiopia",
+            value: 8.9
+        },
+        {
+            name: "United Republic of Tanzania",
+            value: 9.1
+        },
+        {
+            name: "Nigeria",
+            value: 93.9
+        },
+        {
+            name: "South Africa",
+            value: 392.7
+        }, {
+            name: "Egypt",
+            value: 225.1
+        }, {
+            name: "Algeria",
+            value: 141.5
+        }]
+    }, {
+        name: '大洋洲',
+        data: [{
+            name: "Australia",
+            value: 409.4
+        },
+        {
+            name: "New Zealand",
+            value: 34.1
+        },
+        {
+            name: "Papua New Guinea",
+            value: 7.1
+        }]
+    }, {
+        name: '北美洲',
+        data: [{
+            name: "Costa Rica",
+            value: 7.6
+        },
+        {
+            name: "Honduras",
+            value: 8.4
+        },
+        {
+            name: "Jamaica",
+            value: 8.3
+        },
+        {
+            name: "Panama",
+            value: 10.2
+        },
+        {
+            name: "Guatemala",
+            value: 12
+        },
+        {
+            name: "Dominican Republic",
+            value: 23.4
+        },
+        {
+            name: "Cuba",
+            value: 30.2
+        },
+        {
+            name: "USA",
+            value: 5334.5
+        }, {
+            name: "Canada",
+            value: 566
+        }, {
+            name: "Mexico",
+            value: 456.3
+        }]
+    }, {
+        name: '南美洲',
+        data: [{
+            name: "El Salvador",
+            value: 7.2
+        },
+        {
+            name: "Uruguay",
+            value: 8.1
+        },
+        {
+            name: "Bolivia",
+            value: 17.8
+        },
+        {
+            name: "Trinidad and Tobago",
+            value: 34
+        },
+        {
+            name: "Ecuador",
+            value: 43
+        },
+        {
+            name: "Chile",
+            value: 78.6
+        },
+        {
+            name: "Peru",
+            value: 52
+        },
+        {
+            name: "Colombia",
+            value: 74.1
+        },
+        {
+            name: "Brazil",
+            value: 501.1
+        }, {
+            name: "Argentina",
+            value: 199
+        },
+        {
+            name: "Venezuela",
+            value: 195.2
+        }]
+    }, {
+        name: '亚洲',
+        data: [{
+            name: "Nepal",
+            value: 6.5
+        },
+        {
+            name: "Georgia",
+            value: 6.5
+        },
+        {
+            name: "Brunei Darussalam",
+            value: 7.4
+        },
+        {
+            name: "Kyrgyzstan",
+            value: 7.4
+        },
+        {
+            name: "Afghanistan",
+            value: 7.9
+        },
+        {
+            name: "Myanmar",
+            value: 9.1
+        },
+        {
+            name: "Mongolia",
+            value: 14.7
+        },
+        {
+            name: "Sri Lanka",
+            value: 16.6
+        },
+        {
+            name: "Bahrain",
+            value: 20.5
+        },
+        {
+            name: "Yemen",
+            value: 22.6
+        },
+        {
+            name: "Jordan",
+            value: 22.3
+        },
+        {
+            name: "Lebanon",
+            value: 21.1
+        },
+        {
+            name: "Azerbaijan",
+            value: 31.7
+        },
+        {
+            name: "Singapore",
+            value: 47.8
+        },
+        {
+            name: "Hong Kong",
+            value: 49.9
+        },
+        {
+            name: "Syria",
+            value: 52.7
+        },
+        {
+            name: "DPR Korea",
+            value: 59.9
+        },
+        {
+            name: "Israel",
+            value: 64.8
+        },
+        {
+            name: "Turkmenistan",
+            value: 70.6
+        },
+        {
+            name: "Oman",
+            value: 74.3
+        },
+        {
+            name: "Qatar",
+            value: 88.8
+        },
+        {
+            name: "Philippines",
+            value: 96.9
+        },
+        {
+            name: "Kuwait",
+            value: 98.6
+        },
+        {
+            name: "Uzbekistan",
+            value: 122.6
+        },
+        {
+            name: "Iraq",
+            value: 139.9
+        },
+        {
+            name: "Pakistan",
+            value: 158.1
+        },
+        {
+            name: "Vietnam",
+            value: 190.2
+        },
+        {
+            name: "United Arab Emirates",
+            value: 201.1
+        },
+        {
+            name: "Malaysia",
+            value: 227.5
+        },
+        {
+            name: "Kazakhstan",
+            value: 236.2
+        },
+        {
+            name: "Thailand",
+            value: 272
+        },
+        
+        {
+            name: "Indonesia",
+            value: 453
+        },
+        {
+            name: "Saudi Arabia",
+            value: 494.8
+        },
+        {
+            name: "Japan",
+            value: 1278.9
+        },
+        {
+            name: "China",
+            value: 10540.8
+        },
+        {
+            name: "India",
+            value: 2341.9
+        },
+        {
+            name: "Russia",
+            value: 1766.4
+        },
+        {
+            name: "Iran",
+            value: 618.2
+        },
+        {
+            name: "Korea",
+            value: 610.1
+        }]
+    }]
+});
+
+</script>
+
+<script type="text/javascript">
+	function Meteogram(xml, container) {
+    // Parallel arrays for the chart data, these are populated as the XML/JSON file
+    // is loaded
+    this.symbols = [];
+    this.symbolNames = [];
+    this.precipitations = [];
+    this.windDirections = [];
+    this.windDirectionNames = [];
+    this.windSpeeds = [];
+    this.windSpeedNames = [];
+    this.temperatures = [];
+    this.pressures = [];
+    // Initialize
+    this.xml = xml;
+    this.container = container;
+    // Run
+    this.parseYrData();
+}
+/**
+ * Return weather symbol sprites as laid out at http://om.yr.no/forklaring/symbol/
+ */
+Meteogram.prototype.getSymbolSprites = function (symbolSize) {
+    return {
+        '01d': {
+            x: 0,
+            y: 0
+        },
+        '01n': {
+            x: symbolSize,
+            y: 0
+        },
+        '16': {
+            x: 2 * symbolSize,
+            y: 0
+        },
+        '02d': {
+            x: 0,
+            y: symbolSize
+        },
+        '02n': {
+            x: symbolSize,
+            y: symbolSize
+        },
+        '03d': {
+            x: 0,
+            y: 2 * symbolSize
+        },
+        '03n': {
+            x: symbolSize,
+            y: 2 * symbolSize
+        },
+        '17': {
+            x: 2 * symbolSize,
+            y: 2 * symbolSize
+        },
+        '04': {
+            x: 0,
+            y: 3 * symbolSize
+        },
+        '05d': {
+            x: 0,
+            y: 4 * symbolSize
+        },
+        '05n': {
+            x: symbolSize,
+            y: 4 * symbolSize
+        },
+        '18': {
+            x: 2 * symbolSize,
+            y: 4 * symbolSize
+        },
+        '06d': {
+            x: 0,
+            y: 5 * symbolSize
+        },
+        '06n': {
+            x: symbolSize,
+            y: 5 * symbolSize
+        },
+        '07d': {
+            x: 0,
+            y: 6 * symbolSize
+        },
+        '07n': {
+            x: symbolSize,
+            y: 6 * symbolSize
+        },
+        '08d': {
+            x: 0,
+            y: 7 * symbolSize
+        },
+        '08n': {
+            x: symbolSize,
+            y: 7 * symbolSize
+        },
+        '19': {
+            x: 2 * symbolSize,
+            y: 7 * symbolSize
+        },
+        '09': {
+            x: 0,
+            y: 8 * symbolSize
+        },
+        '10': {
+            x: 0,
+            y: 9 * symbolSize
+        },
+        '11': {
+            x: 0,
+            y: 10 * symbolSize
+        },
+        '12': {
+            x: 0,
+            y: 11 * symbolSize
+        },
+        '13': {
+            x: 0,
+            y: 12 * symbolSize
+        },
+        '14': {
+            x: 0,
+            y: 13 * symbolSize
+        },
+        '15': {
+            x: 0,
+            y: 14 * symbolSize
+        },
+        '20d': {
+            x: 0,
+            y: 15 * symbolSize
+        },
+        '20n': {
+            x: symbolSize,
+            y: 15 * symbolSize
+        },
+        '20m': {
+            x: 2 * symbolSize,
+            y: 15 * symbolSize
+        },
+        '21d': {
+            x: 0,
+            y: 16 * symbolSize
+        },
+        '21n': {
+            x: symbolSize,
+            y: 16 * symbolSize
+        },
+        '21m': {
+            x: 2 * symbolSize,
+            y: 16 * symbolSize
+        },
+        '22': {
+            x: 0,
+            y: 17 * symbolSize
+        },
+        '23': {
+            x: 0,
+            y: 18 * symbolSize
+        }
+    };
+};
+/**
+ * Function to smooth the temperature line. The original data provides only whole degrees,
+ * which makes the line graph look jagged. So we apply a running mean on it, but preserve
+ * the unaltered value in the tooltip.
+ */
+Meteogram.prototype.smoothLine = function (data) {
+    var i = data.length,
+        sum,
+        value;
+    while (i--) {
+        data[i].value = value = data[i].y; // preserve value for tooltip
+        // Set the smoothed value to the average of the closest points, but don't allow
+        // it to differ more than 0.5 degrees from the given value
+        sum = (data[i - 1] || data[i]).y + value + (data[i + 1] || data[i]).y;
+        data[i].y = Math.max(value - 0.5, Math.min(sum / 3, value + 0.5));
+    }
+};
+/**
+ * Callback function that is called from Highcharts on hovering each point and returns
+ * HTML for the tooltip.
+ */
+Meteogram.prototype.tooltipFormatter = function (tooltip) {
+    // Create the header with reference to the time interval
+    var index = tooltip.points[0].point.index,
+        ret = '<small>' + Highcharts.dateFormat('%A, %b %e, %H:%M', tooltip.x) + '-' +
+        Highcharts.dateFormat('%H:%M', tooltip.points[0].point.to) + '</small><br>';
+    // Symbol text
+    ret += '<b>' + this.symbolNames[index] + '</b>';
+    ret += '<table>';
+    // Add all series
+    Highcharts.each(tooltip.points, function (point) {
+        var series = point.series;
+        ret += '<tr><td><span style="color:' + series.color + '">\u25CF</span> ' + series.name +
+            ': </td><td style="white-space:nowrap">' + Highcharts.pick(point.point.value, point.y) +
+            series.options.tooltip.valueSuffix + '</td></tr>';
+    });
+    // Add wind
+    ret += '<tr><td style="vertical-align: top">\u25CF Wind</td><td style="white-space:nowrap">' + this.windDirectionNames[index] +
+        '<br>' + this.windSpeedNames[index] + ' (' +
+        Highcharts.numberFormat(this.windSpeeds[index], 1) + ' m/s)</td></tr>';
+    // Close
+    ret += '</table>';
+    return ret;
+};
+/**
+ * Draw the weather symbols on top of the temperature series. The symbols are sprites of a single
+ * file, defined in the getSymbolSprites function above.
+ */
+Meteogram.prototype.drawWeatherSymbols = function (chart) {
+    var meteogram = this,
+        symbolSprites = this.getSymbolSprites(30);
+    $.each(chart.series[0].data, function (i, point) {
+        var sprite,
+            group;
+        if (meteogram.resolution > 36e5 || i % 2 === 0) {
+            sprite = symbolSprites[meteogram.symbols[i]];
+            if (sprite) {
+                // Create a group element that is positioned and clipped at 30 pixels width and height
+                group = chart.renderer.g()
+                    .attr({
+                    translateX: point.plotX + chart.plotLeft - 15,
+                    translateY: point.plotY + chart.plotTop - 30,
+                    zIndex: 5
+                })
+                    .clip(chart.renderer.clipRect(0, 0, 30, 30))
+                    .add();
+                // Position the image inside it at the sprite position
+                chart.renderer.image(
+                    'https://www.highcharts.com/samples/graphics/meteogram-symbols-30px.png',
+                    -sprite.x,
+                    -sprite.y,
+                    90,
+                    570
+                )
+                    .add(group);
+            }
+        }
+    });
+};
+/**
+ * Create wind speed symbols for the Beaufort wind scale. The symbols are rotated
+ * around the zero centerpoint.
+ */
+Meteogram.prototype.windArrow = function (name) {
+    var level,
+        path;
+    // The stem and the arrow head
+    path = [
+        'M', 0, 7, // base of arrow
+        'L', -1.5, 7,
+        0, 10,
+        1.5, 7,
+        0, 7,
+        0, -10 // top
+    ];
+    level = $.inArray(name, ['平静', '微风', '清风', '和风', '四级风',
+                             '清劲风', '大风', '强风', '狂风', '裂风', '暴风',
+                             '大风暴', '飓风']);
+    if (level === 0) {
+        path = [];
+    }
+    if (level === 2) {
+        path.push('M', 0, -8, 'L', 4, -8); // short line
+    } else if (level >= 3) {
+        path.push(0, -10, 7, -10); // long line
+    }
+    if (level === 4) {
+        path.push('M', 0, -7, 'L', 4, -7);
+    } else if (level >= 5) {
+        path.push('M', 0, -7, 'L', 7, -7);
+    }
+    if (level === 5) {
+        path.push('M', 0, -4, 'L', 4, -4);
+    } else if (level >= 6) {
+        path.push('M', 0, -4, 'L', 7, -4);
+    }
+    if (level === 7) {
+        path.push('M', 0, -1, 'L', 4, -1);
+    } else if (level >= 8) {
+        path.push('M', 0, -1, 'L', 7, -1);
+    }
+    return path;
+};
+/**
+ * Draw the wind arrows. Each arrow path is generated by the windArrow function above.
+ */
+Meteogram.prototype.drawWindArrows = function (chart) {
+    var meteogram = this;
+    $.each(chart.series[0].data, function (i, point) {
+        var sprite, arrow, x, y;
+        if (meteogram.resolution > 36e5 || i % 2 === 0) {
+            // Draw the wind arrows
+            x = point.plotX + chart.plotLeft + 7;
+            y = 255;
+            if (meteogram.windSpeedNames[i] === 'Calm') {
+                arrow = chart.renderer.circle(x, y, 10).attr({
+                    fill: 'none'
+                });
+            } else {
+                arrow = chart.renderer.path(
+                    meteogram.windArrow(meteogram.windSpeedNames[i])
+                ).attr({
+                    rotation: parseInt(meteogram.windDirections[i], 10),
+                    translateX: x, // rotation center
+                    translateY: y // rotation center
+                });
+            }
+            arrow.attr({
+                stroke: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                'stroke-width': 1.5,
+                zIndex: 5
+            })
+                .add();
+        }
+    });
+};
+/**
+ * Draw blocks around wind arrows, below the plot area
+ */
+Meteogram.prototype.drawBlocksForWindArrows = function (chart) {
+    var xAxis = chart.xAxis[0],
+        x,
+        pos,
+        max,
+        isLong,
+        isLast,
+        i;
+    for (pos = xAxis.min, max = xAxis.max, i = 0; pos <= max + 36e5; pos += 36e5, i += 1) {
+        // Get the X position
+        isLast = pos === max + 36e5;
+        x = Math.round(xAxis.toPixels(pos)) + (isLast ? 0.5 : -0.5);
+        // Draw the vertical dividers and ticks
+        if (this.resolution > 36e5) {
+            isLong = pos % this.resolution === 0;
+        } else {
+            isLong = i % 2 === 0;
+        }
+        chart.renderer.path(['M', x, chart.plotTop + chart.plotHeight + (isLong ? 0 : 28),
+                             'L', x, chart.plotTop + chart.plotHeight + 32, 'Z'])
+            .attr({
+            'stroke': chart.options.chart.plotBorderColor,
+            'stroke-width': 1
+        })
+            .add();
+    }
+};
+/**
+ * Get the title based on the XML data
+ */
+Meteogram.prototype.getTitle = function () {
+    return 'Meteogram for ' + this.xml.location.name + ', ' + this.xml.location.country;
+};
+/**
+ * Build and return the Highcharts options structure
+ */
+Meteogram.prototype.getChartOptions = function () {
+    var meteogram = this;
+    return {
+        chart: {
+            renderTo: this.container,
+            marginBottom: 70,
+            marginRight: 40,
+            marginTop: 50,
+            plotBorderWidth: 1,
+            width: 800,
+            height: 310
+        },
+        title: {
+            text: this.getTitle(),
+            align: 'left'
+        },
+        credits: {
+            text: '根据<a href="https://yr.no">yr.no</a>预测',
+            href: this.xml.credit.link['@attributes'].url,
+            position: {
+                x: -40
+            }
+        },
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            formatter: function () {
+                return meteogram.tooltipFormatter(this);
+            }
+        },
+        xAxis: [{ // Bottom X axis
+            type: 'datetime',
+            tickInterval: 2 * 36e5, // two hours
+            minorTickInterval: 36e5, // one hour
+            tickLength: 0,
+            gridLineWidth: 1,
+            gridLineColor: (Highcharts.theme && Highcharts.theme.background2) || '#F0F0F0',
+            startOnTick: false,
+            endOnTick: false,
+            minPadding: 0,
+            maxPadding: 0,
+            offset: 30,
+            showLastLabel: true,
+            labels: {
+                format: '{value:%H}'
+            }
+        }, { // Top X axis
+            linkedTo: 0,
+            type: 'datetime',
+            tickInterval: 24 * 3600 * 1000,
+            labels: {
+                format: '{value:<span style="font-size: 12px; font-weight: bold">%a</span> %b %e}',
+                align: 'left',
+                x: 3,
+                y: -5
+            },
+            opposite: true,
+            tickLength: 20,
+            gridLineWidth: 1
+        }],
+        yAxis: [{ // temperature axis
+            title: {
+                text: null
+            },
+            labels: {
+                format: '{value}°',
+                style: {
+                    fontSize: '10px'
+                },
+                x: -3
+            },
+            plotLines: [{ // zero plane
+                value: 0,
+                color: '#BBBBBB',
+                width: 1,
+                zIndex: 2
+            }],
+            // Custom positioner to provide even temperature ticks from top down
+            tickPositioner: function () {
+                var max = Math.ceil(this.max) + 1,
+                    pos = max - 12, // start
+                    ret;
+                if (pos < this.min) {
+                    ret = [];
+                    while (pos <= max) {
+                        ret.push(pos += 1);
+                    }
+                } // else return undefined and go auto
+                return ret;
+            },
+            maxPadding: 0.3,
+            tickInterval: 1,
+            gridLineColor: (Highcharts.theme && Highcharts.theme.background2) || '#F0F0F0'
+        }, { // precipitation axis
+            title: {
+                text: null
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 0,
+            tickLength: 0
+        }, { // Air pressure
+            allowDecimals: false,
+            title: { // Title on top of axis
+                text: 'hPa',
+                offset: 0,
+                align: 'high',
+                rotation: 0,
+                style: {
+                    fontSize: '10px',
+                    color: Highcharts.getOptions().colors[2]
+                },
+                textAlign: 'left',
+                x: 3
+            },
+            labels: {
+                style: {
+                    fontSize: '8px',
+                    color: Highcharts.getOptions().colors[2]
+                },
+                y: 2,
+                x: 3
+            },
+            gridLineWidth: 0,
+            opposite: true,
+            showLastLabel: false
+        }],
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                pointPlacement: 'between'
+            }
+        },
+        series: [{
+            name: '温度',
+            data: this.temperatures,
+            type: 'spline',
+            marker: {
+                enabled: false,
+                states: {
+                    hover: {
+                        enabled: true
+                    }
+                }
+            },
+            tooltip: {
+                valueSuffix: '°C'
+            },
+            zIndex: 1,
+            color: '#FF3333',
+            negativeColor: '#48AFE8'
+        }, {
+            name: '降水',
+            data: this.precipitations,
+            type: 'column',
+            color: '#68CFE8',
+            yAxis: 1,
+            groupPadding: 0,
+            pointPadding: 0,
+            borderWidth: 0,
+            shadow: false,
+            dataLabels: {
+                enabled: true,
+                formatter: function () {
+                    if (this.y > 0) {
+                        return this.y;
+                    }
+                },
+                style: {
+                    fontSize: '8px'
+                }
+            },
+            tooltip: {
+                valueSuffix: 'mm'
+            }
+        }, {
+            name: '气压',
+            color: Highcharts.getOptions().colors[2],
+            data: this.pressures,
+            marker: {
+                enabled: false
+            },
+            shadow: false,
+            tooltip: {
+                valueSuffix: ' hPa'
+            },
+            dashStyle: 'shortdot',
+            yAxis: 2
+        }]
+    }
+};
+/**
+ * Post-process the chart from the callback function, the second argument to Highcharts.Chart.
+ */
+Meteogram.prototype.onChartLoad = function (chart) {
+    this.drawWeatherSymbols(chart);
+    this.drawWindArrows(chart);
+    this.drawBlocksForWindArrows(chart);
+};
+/**
+ * Create the chart. This function is called async when the data file is loaded and parsed.
+ */
+Meteogram.prototype.createChart = function () {
+    var meteogram = this;
+    this.chart = new Highcharts.Chart(this.getChartOptions(), function (chart) {
+        meteogram.onChartLoad(chart);
+    });
+};
+/**
+ * Handle the data. This part of the code is not Highcharts specific, but deals with yr.no's
+ * specific data format
+ */
+Meteogram.prototype.parseYrData = function () {
+    var meteogram = this,
+        xml = this.xml,
+        pointStart;
+    if (!xml || !xml.forecast) {
+        $('#loading').html('<i class="fa fa-frown-o"></i> 加载数据失败，请稍后再试');
+        return;
+    }
+    // The returned xml variable is a JavaScript representation of the provided XML,
+    // generated on the server by running PHP simple_load_xml and converting it to
+    // JavaScript by json_encode.
+    $.each(xml.forecast.tabular.time, function (i, time) {
+        // Get the times - only Safari can't parse ISO8601 so we need to do some replacements
+        var from = time['@attributes'].from + ' UTC',
+            to = time['@attributes'].to + ' UTC';
+        from = from.replace(/-/g, '/').replace('T', ' ');
+        from = Date.parse(from);
+        to = to.replace(/-/g, '/').replace('T', ' ');
+        to = Date.parse(to);
+        if (to > pointStart + 4 * 24 * 36e5) {
+            return;
+        }
+        // If it is more than an hour between points, show all symbols
+        if (i === 0) {
+            meteogram.resolution = to - from;
+        }
+        // Populate the parallel arrays
+        meteogram.symbols.push(time.symbol['@attributes']['var'].match(/[0-9]{2}[dnm]?/)[0]);
+        meteogram.symbolNames.push(time.symbol['@attributes'].name);
+        meteogram.temperatures.push({
+            x: from,
+            y: parseInt(time.temperature['@attributes'].value),
+            // custom options used in the tooltip formatter
+            to: to,
+            index: i
+        });
+        meteogram.precipitations.push({
+            x: from,
+            y: parseFloat(time.precipitation['@attributes'].value)
+        });
+        meteogram.windDirections.push(parseFloat(time.windDirection['@attributes'].deg));
+        meteogram.windDirectionNames.push(time.windDirection['@attributes'].name);
+        meteogram.windSpeeds.push(parseFloat(time.windSpeed['@attributes'].mps));
+        meteogram.windSpeedNames.push(time.windSpeed['@attributes'].name);
+        meteogram.pressures.push({
+            x: from,
+            y: parseFloat(time.pressure['@attributes'].value)
+        });
+        if (i == 0) {
+            pointStart = (from + to) / 2;
+        }
+    });
+    // Smooth the line
+    this.smoothLine(this.temperatures);
+    // Create the chart when the data is loaded
+    this.createChart();
+};
+// End of the Meteogram protype
+$(function () { // On DOM ready...
+    // Set the hash to the yr.no URL we want to parse
+    if (!location.hash) {
+        var place = 'United_Kingdom/England/London';
+        //place = 'France/Rhône-Alpes/Val_d\'Isère~2971074';
+        //place = 'Norway/Sogn_og_Fjordane/Vik/Målset';
+        //place = 'United_States/California/San_Francisco';
+        //place = 'United_States/Minnesota/Minneapolis';
+        location.hash = 'http://www.yr.no/place/' + place + '/forecast_hour_by_hour.xml';
+    }
+    // Then get the XML file through Highcharts' jsonp provider, see
+    // https://github.com/highslide-software/highcharts.com/blob/master/samples/data/jsonp.php
+    // for source code.
+    $.getJSON(
+        'https://www.highcharts.com/samples/data/jsonp.php?url=' + location.hash.substr(1) + '&callback=?',
+        function (xml) {
+            var meteogram = new Meteogram(xml, 'containerv');
+        }
+    );
+});
+
+</script>
+<script type="text/javascript">
+	// 使用数据功能模块进行数据解析
+var chart = Highcharts.chart('containert', {
+	data: {
+		table: 'freq',
+		startRow: 1,
+		endRow: 17,
+		endColumn: 7
+	},
+	chart: {
+		polar: true,
+		type: 'column'
+	},
+	title: {
+		text: '上海的风玫瑰'
+	},
+	subtitle: {
+		text: ''
+	},
+	pane: {
+		size: '85%'
+	},
+	legend: {
+		align: 'right',
+		verticalAlign: 'top',
+		y: 100,
+		layout: 'vertical'
+	},
+	xAxis: {
+		tickmarkPlacement: 'on'
+	},
+	yAxis: {
+		min: 0,
+		endOnTick: false,
+		showLastLabel: true,
+		title: {
+			text: '频率 (%)'
+		},
+		labels: {
+			formatter: function () {
+				return this.value + '%';
+			}
+		},
+		reversedStacks: false
+	},
+	tooltip: {
+		valueSuffix: '%'
+	},
+	plotOptions: {
+		series: {
+			stacking: 'normal',
+			shadow: false,
+			groupPadding: 0,
+			pointPlacement: 'on'
+		}
+	}
+});
+</script>
+</div>

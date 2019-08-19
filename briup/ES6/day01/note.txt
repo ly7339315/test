@@ -1,0 +1,315 @@
+杰普前端笔试题（Javascript部分）
+
+一、简答题（每题3分）
+1. Javascript的组成？
+    ECMAScript  DOM  BOM
+2. Javascript可以运行在什么地方？
+    Node  浏览器
+3. Javascript基本数据类型有哪些
+    undefined null number string boolean
+    //Object--->null  
+    //var obj = null;
+4. Javascript中的内置对象以及函数有哪些？
+    对象：Math Location History document
+    函数：Array Object Date String Number Boolean ... RegExp
+5. 请写出10个数组实例可以调用的方法
+    slice() splice()  join()  toString()  sort() concat() reverse() push()pop() shift() unshift() forEach() some() every() filter() map()
+6. 请写出10个字符串实例可以调用的方法
+    split() toLowerCase()  toUpperCase() indexOf() lastIndexOf() replace() charAt() trim() match() substr() substring()
+7. 请写出Math中常见的5个方法
+    ceil() random() abs() floor() toString() tan() sin() cos()
+8. 函数的调用方法有几种？
+    test()
+    test.call(this,参数列表)
+    test.apply(this,参数数组)
+9. 解释什么是arguments
+    每个函数的内部都有一个局部变量arguments，是用来存放实参的类数组对象
+    function test(a,b,c,d){
+      //a,b,c,d都是test内的局部变量
+      //var a,b,c,d;
+      console.log(d);//4
+      arguments-->{[1,2,3,4,5,6]}
+    }
+    test(1,2,3,4,5,6)
+10.== 与 ===的区别
+    == 比较值
+    === 比较类型和值 如果类型不一致，直接返回false
+11.简述DOM与jquery关系
+    DOM是文档对象模型，在js中提供了原生的DOM API。
+    jQuery封装了DOM操作
+12.简述事件流与事件冒泡
+    事件流：指从页面中接收事件的顺序，有冒泡流和捕获流。
+    事件流是事件执行的顺序，在IE底下是事件冒泡，在非IE底下是事件捕获。
+    事件冒泡是：当子元素与父元素都绑定了同一个事件的时候，触发了子元素的事件之后，先执行子元素的事件处理程序，再冒泡执行父元素的事件处理程序
+13.简述事件绑定方法，并讨论兼容性
+    HTML绑定，无兼容性问题
+    DOM0级绑定，无兼容性问题
+    DOM2级绑定
+      在非IE8及以下，使用addEventListener(type,handle)
+      在IE8及以下，使用attachEvent('on'+type,handle)
+14.如何理解DOM对象的事件默认行为？
+    有的DOM对象有默认的行为，比如点击a标签跳转，这就是a标签在点击之后的默认行为
+15.在非IE浏览器，如何取消事件默认行为？如何取消事件冒泡？如何获取事件处理程序当前正在处理事件的那个元素
+    event.preventDefault();
+    event.stopPropagation();
+    event.currentTarget  this
+16.我们为一个dom对象绑定了一个事件处理函数，请问谁来调用这个事件处理函数？
+    这个dom对象
+    div.onclick = function(){
+
+    }
+    ul.onclick = function(event){
+      if(event.target.nodeName=="LI"){
+        alert(1);
+      }
+    }
+17.简述事件代理机制？
+    给父元素绑定事件，在相应子元素的时候触发。
+18.目前为止，我们学过html,css,js,jquery,bootstrap简述这些技术的作用和技术之间的关联性？
+    html页面结构
+    css 页面样式
+    js  页面动作行为
+    jQuery 封装了js中的DOM操作和Ajax技术
+    bootstrap  封装了 html css js jQuery
+19.谈谈你对于原型链的理解？
+    js通过原型链来继承，在原型链中的方法，实例可以调用。
+20.简述Ajax机制以及原生Ajax的实现机制
+    Ajax是前后端数据交互的技术。
+    Ajax机制：建立连接，发送数据，等待响应，如果成功，获取返回值，如果失败，获取失败信息
+    var xhr = new XMLHttpRequest();
+    xhr.open(method,url,true);
+    xhr.send(data);
+    xhr.onreadystatechange = function () {
+      // 这步为判断服务器是否正确响应  xhr.readyState == 4 响应完成
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        console.log(xhr.responseText);
+      } 
+    };
+21. 如何理解跨域
+    A网站的javascript代码试图访问B网站
+    不同域之间的访问就是跨域
+22. 是否使用过github？ 你熟悉的git命令有哪些？
+    git init   在当前目录新建一个Git代码库
+    git clone [url]  下载一个项目和它的整个代码历史
+    git add    添加文件到暂存区
+    git commit -m [message]  提交暂存区到仓库区
+    git status 显示有变更的文件
+23. 是否使用过腾讯云或者阿里云，你使用的云服务器的操作系统是？写出10个你用过的linux命令并解释该命令的含义。
+  例如： 
+    声明 $表示为linux操作系统的终端标识
+    $ cd [目录]]  切换目录，当目录为空的时候表示进入到家目录
+    ...
+    ls      展示目录内的内容
+    cd ..   打开上一级
+    mkdir   创建目录
+    rm      删除文件
+    cat     查看内部内容
+    more    查看内部内容
+    vi      打开vi编辑器
+    vim     打开vim编辑器
+    cp      复制
+    ftp     文件传输
+    dirs   显示目录记录
+    httpd  Apache HTTP服务器程序
+    apachectl  控制Apache HTTP服务器的程序
+    exit   关闭控制台
+    su     用于变更为其他使用者的身份，除 root 外，需要键入该使用者的密码
+    sudo   以系统管理者的身份执行指令，也就是说，经由 sudo 所执行的指令就好像是 root 亲自执行。
+    who    显示系统中有哪些使用者正在上面
+    whoami 用于显示自身用户名称
+    whois  用于查找并显示用户信息
+    clear  清屏
+24. localStorage和sessionStorage是什么?区别是什么?
+    本地存储   
+    localstorage  跨选项卡，存在本地浏览器磁盘中          
+    sessionstorage  仅限当前选项卡
+25. Web Worker的实现方式是？有什么作用？
+    创建一个外部JS文件，使用onmessage监听，使用postMessage发送数据
+      other.js
+      onmessage = function(event){
+        event.data 里的是主线程给后台线程的数据
+        ....
+        postMessage(发送给主线程的数据);
+      }
+    在另外一个文件中，创建Worker对象,使用onmessage监听，使用postMessage发送数据
+      index.html  主线程
+      var worker = new Worker(other.js);
+      worker.onmessage = function(event){
+        event.data 里的是后台线程给主线程的数据
+        ....
+      }
+      postMessage(发送给后台线程的数据);
+
+    作用：可以不阻塞主线程代码的执行，将耗费时间的代码放到后台线程中去执行，有结果有返回给主线程。节省代码的执行时间
+    
+二、编程题 （每题5分）
+1. 数组去重
+  例如：
+    var arr = [1,2,3,4,5,3,4,6,8,1];
+    编写程序去除数组内重复的值得到如下结果
+    arr = [1,2,3,4,5,6,8]
+  答：
+    function test1(arr){
+      var tempArr = [];
+      for(var i=0;i<arr.length;i++){
+        if(tempArr.indexOf(arr[i])==-1){
+          tempArr.push(arr[i]);
+        }
+      }
+      arr = tempArr;
+      console.log(tempArr);
+    }
+    test1(arr);
+2. 有一个数组中保存了多个对象，每个对象表示一个题目的信息（题目名称，提交次数，通过次数），请你计算出题目难度并且整理数据重新按照题目名称自然排序。难度规则如下：
+    0=<Y/X<=0.3,题目难度为5，
+    0.3<Y/X<=0.6,题目难度为4，
+    0.6<Y/X<=1,题目难度为3，
+    Y是通过次数，X是提交次数
+
+  参数为：
+    var arr = [{
+      name:'math',
+      commit_time:100,
+      pass_time:90
+    },{
+      name:'algorithm',
+      commit_time:10,
+      pass_time:8
+    },{
+      name:'string',
+      commit_time:50,
+      pass_time:1
+    },{
+      name:'dp',
+      commit_time:100,
+      pass_time:50
+    }]
+  
+  输出格式参照：
+    var result = [{
+      name:'algorithm',
+      level:3
+    },{
+      name:'dp',
+      level:4
+    },{
+      name:'math',
+      level:3
+    },{
+      name:'string',
+      level:5
+    }]
+  答：
+    function test2(arr){
+      var tempArr = [];
+      arr.forEach(function(item,index){
+        var obj = {
+          name:item.name
+        };
+        var num = item.pass_time/item.commit_time;
+        if(num<=0.3&&num>=0){
+          obj.level = 5;
+        }else if(num<=0.6&&num>0.3){
+          obj.level = 4;
+        }else{
+          obj.level = 3;
+        }
+        tempArr.push(obj);
+      });
+      tempArr.sort(function(a,b){
+        if(a.name<b.name){
+          return -1;  //不交换位置     
+        }
+        return 1;
+      });
+      console.log(tempArr);
+    }
+    test2(arr);
+
+
+3. 编写代码完成数组内元素的反转
+    答：
+      function test3(arr){
+        var length = arr.length-1;
+        for(var i=0;i<arr.length/2;i++){
+          var temp = arr[i];
+          arr[i] = arr[length-i];
+          arr[length-i] = temp;
+        }
+        console.log(arr);
+      }
+      test3(arr);
+4. 使用你熟悉的排序算法完成数组的升序排列(使用排序算法)
+  参数格式：
+    var arr = [8,19,3,12,5,4,2,3,7,6,9];
+  答：
+    function test4(arr){
+      // 冒泡排序
+      for(var i=0;i<arr.length;i++){
+        for(var j=0;j<arr.length-1;j++){
+          if(arr[j]>arr[j+1]){
+            // 交换位置
+            var temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+          }
+        }
+      }
+      console.log(arr);
+    }
+    test4(arr);
+  
+5. 现有DOM如下
+    <ul>
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+      <li>fourth</li>
+      <li>fifth</li>
+    </ul>
+
+    为每个li使用原生DOM API绑定点击事件，要求点击first的时候弹出1，点击second的使用弹出2等等
+
+    答：
+      window.onload =  function(){
+        //解决方案1
+        var lis = document.getElementsByTagName('li');
+        lis = Array.prototype.slice.call(lis,0);
+        lis.forEach(function(item,index){
+          item.onclick = function(event){
+            alert(index+1);
+          }
+        });
+        //解决方案2闭包
+        var lis = document.getElementsByTagName('li');
+        lis = Array.prototype.slice.call(lis,0);
+        for(var i=0;i<lis.length;i++){
+          lis[i].onclick = (function(num){
+            return function(){
+              alert(num);
+            }
+          })(i);
+        }
+        //解决方案3事件代理
+        var ul = document.getElementsByTagName('ul')[0];
+        ul.onclick = function(event){
+          var target = event.target;
+          if(target.nodeName=="LI"){
+            if(li.innerText=="first"){
+              alert(1);
+            }else if(li.innerText=="second"){
+              alert(2);
+            }else if(li.innerText=="third"){
+              alert(3);
+            }else if(li.innerText=="fourth"){
+              alert(4);
+            }else if(li.innerText=="fifth"){
+              alert(5);
+            }else{
+              alert(0);
+            }
+          }
+        }
+      }
+
+

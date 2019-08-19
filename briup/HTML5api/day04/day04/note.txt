@@ -1,0 +1,33 @@
+Web SQL 数据库     SQL Lite
+	关系型数据库     （Mysql  Oracle）
+	可以使用SQL语言
+		select * from student  查询sql语句
+	执行sql语句，产生一些结果，去接受结果，处理结果
+	事务   独立性    不受外界干扰 
+indexedDB 
+	非关系型数据库
+	数据仓库存放数据	
+		key value键值对形式去存放数据
+			value可以是一个对象
+
+		obj1    {name:"zhangsan",age:12}
+	数据仓库
+		需要借助事务去操作
+
+indexedDB    
+	数据库
+		对象仓库-对象存储
+			对象记录
+			key value
+			id
+			1 		obj1
+			2       obj2
+			3
+
+操作流程
+	打开连接
+	成功之后，获取数据库，获取事务对象，获取对象仓库，最后通过对象仓库进行增删改查
+
+	创建对象仓库
+		在数据库版本更新的时候创建对象仓库
+

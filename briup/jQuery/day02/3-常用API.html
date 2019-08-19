@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src='../js/jquery-3.4.1.min.js'></script>
+    <script type="text/javascript">
+    	$(function(){
+          // console.log($('div').html());
+
+           // console.log($('div').text());
+           // $('div').html('<h2>hello</h2>');
+           // $('div').text('hello');
+           $('input').val('hello');
+           console.log($('input').val());
+           // $('div').html(function(index,item){
+          	// 	console.log(index,item);
+           // });
+           $('div').each(function(index, item) {
+           	console.log(index,item);
+           	console.log($(index),$(item));
+           	console.log($(item).html());
+           });
+
+    	});
+    </script>
+</head>
+<body>
+<input type="text" value="zhangsan" name="">
+<input type="text"  value="lisi" name="">
+
+	<div><span>one</span></div>
+	<div><span>two</span></div>
+	<div><span>three</span></div>
+
+</body>
+</html>

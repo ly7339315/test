@@ -1,0 +1,48 @@
+less  sass  预处理工具
+	css代码
+BootStrap  响应式框架
+	框架  html/css/js静态框架，基于jQuery的。
+	jQuery 是js的一个库
+响应式
+	css 媒体查询。
+	在手机底下显示两列
+	在电脑底下显示4列、6列
+
+	超小屏  小于768px  手机   -xs-
+	小屏   768-992px  平板   -sm-
+	中屏   992-1200px 普通电脑   -md-
+	大屏   1200px之上   -lg-
+	@media screen and (min-width:992px){
+		div{
+			width:40%;
+		}
+	}
+	@media screen and (min-width:1200px){
+		div{
+			width:30%;	
+		}
+	}
+栅格系统
+	12列  的栅格系统
+	<div class="row">
+		<div class="col-sm-3 col-md-6"></div>
+		<div class="col-sm-9 col-md-6"></div>
+		<div class="col-sm-9 col-md-6"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-9"></div>
+	</div>
+
+可见性原理
+	先让使用visible-xx修饰的都不可见，然后再分情况讨论，在768以下，visible-xs显示。在768-992，visible-sm显示。在768-1200，visible-md显示。在1200之上，visible-lg显示。
+
+	鼠标悬停的时候，当前的li有背景
+		
+
+React、Vue、AngularJS    数据驱动框架，不需要手动去操作DOM。 
+
+
+
+
+

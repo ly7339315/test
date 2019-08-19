@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var arr = [];
+			$('form :checkbox').click(function(){
+				var $result = $('form :checkbox:checked');
+			    // console.log($result);
+
+			    // for(var i=0;i<$result.length;i++){
+       //              $result[i] DOM
+			    // 	arr.push($result[i].value);
+			    // }
+
+			    // var result = Array.prototype.slice.call($result,0);
+			    // arr = result.map(function(item){
+			    //    item DOM
+			    // 	return item.value
+			    // });
+
+			    $arr = $result.map(function(index,item){
+                       //item DOM
+                       // console.log(index,item);
+                       return $(item).val();
+			    });
+			    arr = Array.prototype.slice.call($arr,0);
+			    console.log(arr);
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<div>
+			<input type="text" name="">
+
+		</div>
+		<div>
+			<input type="checkbox" name="" value="1">
+			<input type="checkbox" name="" value="2">
+			<input type="checkbox" name="" value="3">
+
+		</div>
+	</form>
+</body>
+</html>

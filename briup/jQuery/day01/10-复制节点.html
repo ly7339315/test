@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src='../js/jquery-3.4.1.min.js'></script>
+	<script type="text/javascript">
+		$(function(){
+           $('.one').click(function(){
+           	alert(1);
+           });
+           var $clone = $('.one').clone(true);
+           // $('body').append($clone);
+           // $('.one').replaceWith($('<div>hello</div>'));
+           $('<div>hello</div>').replaceAll('.one');
+		});
+	</script>
+</head>
+<body>
+	<div class="one">one</div>
+	<div class="two">two</div>
+</body>
+</html>

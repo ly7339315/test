@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src='../js/jquery-3.4.1.min.js'></script>
+	<script type="text/javascript">
+		$(function(){
+			$.ajax(' http://api.wangshuwen.com/getRegion',{
+				method:'GET',
+				data:{id:1001},
+				success:function(res){
+					console.log(res,1);
+				},
+				error:function(error){
+					console.log(error)
+				}
+			});
+
+			// $.ajax({
+			// 	url:'',
+			// 	method:'',
+			// 	data:{},
+			// 	headers:{
+			// 		'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8';
+			// 	}
+			// 	success:function(res){},
+			// 	error:function(error){}
+			// });
+
+            //GET 无参
+			$.ajax({
+				url:'http://api.wangshuwen.com/getRegion',
+				method:'GET',
+				success:function(res){
+					console.log(res,2);
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+
+           //GET 有参
+			$.ajax({
+				url:'http://api.wangshuwen.com/getRegion',
+				method:'GET',
+				data:{
+					name:'zhangsan',
+					age:15
+				},
+				success:function(res){
+					console.log(res,3);
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+
+			//POST 无参
+			$.ajax({
+				url:'http://api.wangshuwen.com/getRegion',
+				method:'POST',
+
+				success:function(res){
+					console.log(res,4);
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+
+			//POST 有参
+			$.ajax({
+				url:'http://api.wangshuwen.com/getRegion',
+				method:'POST',
+				data:{
+					name:'zhangsan',
+					age:15
+				},
+				success:function(res){
+					console.log(res,5);
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+
+			$.get('http://api.wangshuwen.com/getRegion',function(res){
+				console.log(res,6);
+			});
+			$.post('http://api.wangshuwen.com/getRegion',function(res){
+				console.log(res,7);
+			});
+			$.getJSON('http://api.wangshuwen.com/getRegion',{name:'123'},function(res){
+				console.log(res,8);
+			});
+
+
+
+		});
+	</script>
+</head>
+<body>
+	<button>加载数据</button>
+</body>
+</html>

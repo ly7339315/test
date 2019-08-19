@@ -1,0 +1,63 @@
+课堂作业
+ztree显示在页面上
+	1.基础数据封装  -基础
+	2.在页面上显示一个树形插件  -基础
+	3.将数据封装成属性插件需要的数据
+	4.将封装的数据显示到树形插件上
+	5.将数据保存到数据库，然后从数据库获取数据，封装数据，显示到树形插件上。  --终极版
+画布-动态太极图  兴趣
+
+根编目
+	{id:1,name:'根编目',cate_path:null}
+一级编目
+	{id:2,name:'Java课程',cate_path:'1'}
+二级编目
+	{id:3,name:'Spring课程',cate_path:'1.2'}
+三级编目
+	{id:4,name:'SpringBoot课程',cate_path:'1.2.3'}
+展示树的形式
+	根编目
+		Java课程
+			Spring课程
+				SpringBoot课程
+					...
+		Web课程
+			React课程
+				redux课程
+					....
+					...
+[
+	{id:1,name:'根编目',cate_path:null},
+	{id:2,name:'Java课程',cate_path:'1.2'},
+	{id:3,name:'Spring课程',cate_path:'1.2.3'},
+	{id:6,name:'Servlet课程',cate_path:'1.2.6'},
+	{id:4,name:'SpringBoot课程',cate_path:'1.2.3.4'},
+	{id:5,name:'Web课程',cate_path:'1.5'},
+	{id:7,name:'React课程',cate_path:'1.5.7'}
+	{id:8,name:'redux课程',cate_path:'1.5.7.8'}
+]
+封装数据
+	一级内部有二级，二级内部有三级，三级内部有四级
+	[
+		{id:2,name:'Java课程',cate_path:'1.2',child:[{id:3,name:'Spring课程',cate_path:'1.2.3',child:[{id:4,name:'SpringBoot课程',cate_path:'1.2.3.4'}]},{id:6,name:'Servlet课程',cate_path:'1.2.6'}] },
+		{id:5,name:'Web课程',cate_path:'1.5',child:[{id:7,name:'React课程',cate_path:'1.5.7',child:[{id:8,name:'redux课程',cate_path:'1.5.7.8'}]}]}
+	]
+
+{
+	id:2,
+	name:'Java课程',
+	cate_path:'1.2',
+	parent_id:1
+}
+{
+	id:8,
+	name:'redux课程',
+	cate_path:'1.5.7.8',
+	parent_id:7
+}
+遍历
+	filter   parent_id
+
+
+
+
